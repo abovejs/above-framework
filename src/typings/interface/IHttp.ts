@@ -1,4 +1,4 @@
-import { Request, ResponseToolkit } from 'hapi';
+import { Request, ResponseToolkit } from '@hapi/hapi';
 import { extractType, mappedSchema } from 'joi';
 import 'joi-extract-type';
 

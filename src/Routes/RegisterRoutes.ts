@@ -1,4 +1,4 @@
-import { Server } from 'hapi';
+import { Server } from '@hapi/hapi';
 import klawSync from 'klaw-sync';
 import path from 'path';
 import { BasePath } from '../Helpers';

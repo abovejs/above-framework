@@ -1,6 +1,6 @@
-import hapiSwagger from 'hapi-swagger';
 import Inert from '@hapi/inert';
 import Vision from '@hapi/vision';
+import hapiSwagger from 'hapi-swagger';
 import { BasePath } from '../Helpers';
 
 const Swagger = {
