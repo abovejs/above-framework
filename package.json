@@ -18,8 +18,8 @@
     "test:unit": "nyc --silent ava",
     "watch": "run-s clean build:main && run-p \"build:main -- -w\" \"test:unit -- --watch\"",
     "semantic-release": "semantic-release",
-    "clean": "trash build test",
-    "prepare:npm": "cp -r build/* . && rm -rf build/"
+    "clean": "",
+    "prepare:npm": ""
   },
   "engines": {
     "node": ">=8.9"
