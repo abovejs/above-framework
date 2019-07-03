@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/abovejs/framework/compare/v1.0.0...v1.0.1) (2019-07-03)
+
+
+### Bug Fixes
+
+* corrigir ferramenta ([90bbcd0](https://github.com/abovejs/framework/commit/90bbcd0))
+
 # 1.0.0 (2019-07-03)
 
 
