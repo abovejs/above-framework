@@ -1,7 +1,7 @@
 {
   "name": "above-framework",
   "version": "1.0.0",
-  "description": "Framework with hapijs",
+  "description": "Framework with hapijsd",
   "main": "build/index.js",
   "typings": "build/typings/index.d.ts",
   "repository": "https://github.com/abovejs/framework",
