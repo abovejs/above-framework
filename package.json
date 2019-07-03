@@ -25,7 +25,7 @@
     "node": ">=8.9"
   },
   "dependencies": {
-    "@types/hapi": "^18.0.1",
+    "@types/hapi": "^18.0.2",
     "abstract-logging": "^1.0.0",
     "boom": "^7.3.0",
     "bunyan": "^1.8.12",
@@ -38,7 +38,10 @@
     "klaw-sync": "^6.0.0",
     "vision": "^5.4.4",
     "youch": "^2.0.10",
-    "youch-terminal": "^1.0.0"
+    "youch-terminal": "^1.0.0",
+    "@types/joi": "^14.3.2",
+    "joi": "^14.3.1",
+    "joi-extract-type": "^0.1.8"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.5.2",
@@ -51,7 +54,6 @@
     "@types/dotenv": "^6.1.0",
     "@types/hapi-auth-jwt2": "^8.0.2",
     "@types/inert": "^5.1.2",
-    "@types/joi": "^14.3.2",
     "@types/klaw-sync": "^6.0.0",
     "@types/node": "^11.11.7",
     "@types/vision": "^5.3.6",
@@ -59,7 +61,6 @@
     "codecov": "^3.2.0",
     "cz-conventional-changelog": "^2.1.0",
     "husky": "^1.3.1",
-    "joi-extract-type": "^0.1.8",
     "npm-run-all": "^4.1.5",
     "nyc": "^13.3.0",
     "opn-cli": "^4.0.0",
