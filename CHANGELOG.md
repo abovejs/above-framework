@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/abovejs/framework/compare/v1.0.1...v1.0.2) (2019-07-03)
+
+
+### Bug Fixes
+
+* atualizar hapi ([97e4d97](https://github.com/abovejs/framework/commit/97e4d97))
+
 ## [1.0.1](https://github.com/abovejs/framework/compare/v1.0.0...v1.0.1) (2019-07-03)
 
 
