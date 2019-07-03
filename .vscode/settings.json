@@ -1,0 +1,12 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "tslint.enable": true,
+  "tslint.autoFixOnSave": true,
+  "tslint.alwaysShowStatus": true,
+  "editor.formatOnSave": true,
+  "javascript.format.enable": true,
+  "javascript.validate.enable": true,
+  "prettier.tslintIntegration": true,
+  "tslint.packageManager": "yarn"
+}
+
