@@ -1,4 +1,4 @@
-import { Server } from '@hapi/hapi';
+import { Server } from 'hapi';
 import klawSync from 'klaw-sync';
 import path from 'path';
 import R from 'ramda';

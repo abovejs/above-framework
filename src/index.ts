@@ -1,4 +1,4 @@
-import Hapi from '@hapi/hapi';
+import Hapi from 'hapi';
 import Joi from 'joi';
 import { BasePath } from './Helpers';
 

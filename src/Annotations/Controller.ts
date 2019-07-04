@@ -1,4 +1,4 @@
-import { RouteOptions, Server, Util } from '@hapi/hapi';
+import { RouteOptions, Server, Util } from 'hapi';
 
 const methods = [];
 
@@ -12,7 +12,7 @@ export const Controller = (baseRoute: string = '') => {
           ...item,
           path: `/${prefix}${item.path.replace('{baseRoute}', baseRoute)}`
         });
-       });
+      });
       server.route(routes);
       return original;
     };

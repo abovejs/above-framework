@@ -1,4 +1,4 @@
-import Hapi from '@hapi/hapi';
+import Hapi from 'hapi';
 import Jwt from './Jwt';
 
 import { BasePath } from '../Helpers';

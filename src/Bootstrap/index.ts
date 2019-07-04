@@ -1,12 +1,13 @@
+import * as Hapi from 'hapi';
 import { BasePath } from '../Helpers';
 import RegisterPlugins from '../Plugins/RegisterPlugins';
 import RegisterRoutes from '../Routes/RegisterRoutes';
 import Server from '../Server';
 
-const configureServer = async (serve: any) => {
+const configureServer = async (server: Hapi.Server) => {
   try {
-    await RegisterPlugins(serve);
-    await RegisterRoutes(serve);
+    await RegisterPlugins(server);
+    await RegisterRoutes(server);
     return true;
   } catch {
     return false;

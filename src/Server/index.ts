@@ -1,4 +1,4 @@
-import Hapi from '@hapi/hapi';
+import Hapi from 'hapi';
 import Youch from 'youch';
 import forTerminal from 'youch-terminal';
 import { filterOfBaseException } from './Error';
@@ -26,13 +26,15 @@ const Server = () => {
     }
   });
 
-  server.events.on('request', (_event, tags) => {
-    if (tags.error && process.env.NODE_ENV !== 'test') {
-      new Youch(tags.error, {}).toJSON().then(output => {
-        console.error(forTerminal(output));
-      });
-    }
-  });
+  if (process.env.NODE_ENV !== 'test') {
+    server.events.on('request', (_event, tags) => {
+      if (tags.error) {
+        new Youch(tags.error, {}).toJSON().then(output => {
+          console.error(forTerminal(output));
+        });
+      }
+    });
+  }
 
   filterOfBaseException(server);
 

@@ -1,4 +1,4 @@
-import { Server } from '@hapi/hapi';
+import { Server } from 'hapi';
 import BaseException from '../Exceptions/BaseException';
 
 export const filterOfBaseException = (server: Server) => {
