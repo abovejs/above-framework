@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/abovejs/framework/compare/v1.0.2...v1.1.0) (2019-07-04)
+
+
+### Features
+
+* mudar sistema de registro ([83d5a3d](https://github.com/abovejs/framework/commit/83d5a3d))
+
 ## [1.0.2](https://github.com/abovejs/framework/compare/v1.0.1...v1.0.2) (2019-07-03)
 
 
