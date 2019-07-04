@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/abovejs/framework/compare/v1.2.0...v1.2.1) (2019-07-04)
+
+
+### Bug Fixes
+
+* incluir types do hapi ([2b43d4e](https://github.com/abovejs/framework/commit/2b43d4e))
+
 # [1.2.0](https://github.com/abovejs/framework/compare/v1.1.4...v1.2.0) (2019-07-04)
 
 
