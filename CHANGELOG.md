@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/abovejs/framework/compare/v1.1.2...v1.1.3) (2019-07-04)
+
+
+### Bug Fixes
+
+* remover console.log ([ecf1193](https://github.com/abovejs/framework/commit/ecf1193))
+
 ## [1.1.2](https://github.com/abovejs/framework/compare/v1.1.1...v1.1.2) (2019-07-04)
 
 
