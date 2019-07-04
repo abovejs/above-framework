@@ -3,10 +3,10 @@ import RegisterPlugins from '../Plugins/RegisterPlugins';
 import RegisterRoutes from '../Routes/RegisterRoutes';
 import Server from '../Server';
 
-const configureServer = async (server: any) => {
+const configureServer = async (serve: any) => {
   try {
-    await RegisterPlugins(server);
-    await RegisterRoutes(server);
+    await RegisterPlugins(serve);
+    await RegisterRoutes(serve);
     return true;
   } catch {
     return false;
@@ -15,13 +15,16 @@ const configureServer = async (server: any) => {
 interface IValidate {
   path?: string;
 }
+let server = null;
 const Bootstrap = async ({ path }: IValidate) => {
-  const server = Server();
-  if (path) {
-    BasePath.folder = path;
+  if (server === null) {
+    server = Server();
+    if (path) {
+      BasePath.folder = path;
+    }
+    await configureServer(server);
   }
 
-  await configureServer(server);
   if (process.env.NODE_ENV !== 'test') {
     await server.start();
     console.info(`Server running: ${server.info.uri}`);
