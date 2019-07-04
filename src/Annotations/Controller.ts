@@ -5,17 +5,16 @@ const methods = [];
 export const Controller = (baseRoute: string = '') => {
   return function(target: any) {
     const original = target;
+    const routes = [];
     const f: any = function(server: Server, prefix: string) {
       methods[target.name].forEach(item => {
-        const route = {
+        routes.push({
           ...item,
-          path: item.path.replace('{baseRoute}', baseRoute)
-        };
-        server.route({
-          ...route,
-          path: `/${prefix}${route.path}`
+          path: `/${prefix}${item.path.replace('{baseRoute}', baseRoute)}`
         });
-      });
+       });
+      console.log(routes);
+      server.route(routes);
       return original;
     };
     f.prototype = original.prototype;
