@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/abovejs/framework/compare/v1.2.1...v1.2.2) (2019-07-04)
+
+
+### Bug Fixes
+
+* não usar singleton no server ([e470f9a](https://github.com/abovejs/framework/commit/e470f9a))
+
 ## [1.2.1](https://github.com/abovejs/framework/compare/v1.2.0...v1.2.1) (2019-07-04)
 
 
