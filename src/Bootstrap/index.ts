@@ -15,16 +15,12 @@ const configureServer = async (serve: any) => {
 interface IValidate {
   path?: string;
 }
-let server = null;
 const Bootstrap = async ({ path }: IValidate) => {
-  if (server === null) {
-    server = Server();
-    if (path) {
-      BasePath.folder = path;
-    }
-    await configureServer(server);
+  const server = Server();
+  if (path) {
+    BasePath.folder = path;
   }
-
+  await configureServer(server);
   if (process.env.NODE_ENV !== 'test') {
     await server.start();
     console.info(`Server running: ${server.info.uri}`);
