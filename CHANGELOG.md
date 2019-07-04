@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/abovejs/framework/compare/v1.1.4...v1.2.0) (2019-07-04)
+
+
+### Features
+
+* permitir que seja possível importar direto do Joi ([3768aed](https://github.com/abovejs/framework/commit/3768aed))
+
 ## [1.1.4](https://github.com/abovejs/framework/compare/v1.1.3...v1.1.4) (2019-07-04)
 
 
