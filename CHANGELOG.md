@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/abovejs/framework/compare/v1.2.2...v1.2.3) (2019-07-04)
+
+
+### Bug Fixes
+
+* voltar para o hapi old ([cf6c879](https://github.com/abovejs/framework/commit/cf6c879))
+
 ## [1.2.2](https://github.com/abovejs/framework/compare/v1.2.1...v1.2.2) (2019-07-04)
 
 
