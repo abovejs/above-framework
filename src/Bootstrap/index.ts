@@ -20,6 +20,7 @@ const Bootstrap = async ({ path }: IValidate) => {
   if (path) {
     BasePath.folder = path;
   }
+
   await configureServer(server);
   if (process.env.NODE_ENV !== 'test') {
     await server.start();

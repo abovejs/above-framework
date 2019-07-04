@@ -14,8 +14,8 @@ const Server = () => {
     debug,
     routes: {
       timeout: {
-        server: (parseInt(process.env.RAPPY_TIMEOUT, 10) || 240) * 1000,
-        socket: (parseInt(process.env.RAPPY_TIMEOUT, 10) || 240) * 1000 + 1000
+        server: (parseInt(process.env.APP_TIMEOUT, 10) || 240) * 1000,
+        socket: (parseInt(process.env.APP_TIMEOUT, 10) || 240) * 1000 + 1000
       },
       cors: true,
       validate: {

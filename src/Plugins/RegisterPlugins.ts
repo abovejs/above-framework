@@ -1,11 +1,11 @@
-import { Server } from '@hapi/hapi';
+import Hapi from '@hapi/hapi';
 import Jwt from './Jwt';
 
 import { BasePath } from '../Helpers';
 import Log, { ILogstashOptions } from './Log';
 import Swagger from './Swagger';
 
-const RegisterPlugins = async (server: Server) => {
+const RegisterPlugins = async (server: Hapi.Server) => {
   if (process.env.ENV !== 'production') {
     await server.register({
       plugin: Swagger
@@ -34,16 +34,6 @@ const RegisterPlugins = async (server: Server) => {
       } as ILogstashOptions
     });
   }
-
-  server.route({
-    method: 'GET',
-    path: '/health',
-    handler: (_request, h) => {
-      return h.response({
-        status: 'OK'
-      });
-    }
-  });
 };
 
 export default RegisterPlugins;

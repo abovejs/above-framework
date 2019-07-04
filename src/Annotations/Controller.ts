@@ -6,26 +6,16 @@ export const Controller = (baseRoute: string = '') => {
   return function(target: any) {
     const original = target;
     const f: any = function(server: Server, prefix: string) {
-      const routes = [];
       methods[target.name].forEach(item => {
         const route = {
           ...item,
           path: item.path.replace('{baseRoute}', baseRoute)
         };
-        routes.push({
-          routes: {
-            prefix: `/${prefix}`
-          },
-          plugin: {
-            name: `${route.method}_${route.path}`,
-            register(serve) {
-              serve.route(route);
-            }
-          }
+        server.route({
+          ...route,
+          path: `/${prefix}${route.path}`
         });
       });
-      server.register(routes);
-
       return original;
     };
     f.prototype = original.prototype;

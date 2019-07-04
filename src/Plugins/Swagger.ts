@@ -37,7 +37,9 @@ const Swagger = {
       Vision,
       {
         plugin: hapiSwagger,
-        options: swaggerOptions
+        options: {
+          ...swaggerOptions,
+        }
       }
     ]);
 

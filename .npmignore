@@ -21,3 +21,4 @@ commitlint.config.js
 CHANGELOG.md
 .npmrc
 LICENSE
+node_modules
