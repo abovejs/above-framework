@@ -13,7 +13,6 @@ export const Controller = (baseRoute: string = '') => {
           path: `/${prefix}${item.path.replace('{baseRoute}', baseRoute)}`
         });
        });
-      console.log(routes);
       server.route(routes);
       return original;
     };
