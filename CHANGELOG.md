@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/abovejs/framework/compare/v1.1.1...v1.1.2) (2019-07-04)
+
+
+### Bug Fixes
+
+* listagem de arquivos trysafe ([7396a2c](https://github.com/abovejs/framework/commit/7396a2c))
+
 ## [1.1.1](https://github.com/abovejs/framework/compare/v1.1.0...v1.1.1) (2019-07-04)
 
 
