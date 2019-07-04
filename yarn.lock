@@ -1003,7 +1003,7 @@
   resolved "https://registry.yarnpkg.com/@types/hapi__catbox/-/hapi__catbox-10.2.2.tgz#b13fbdd6006c8793eb80919158593bc2bf8307c4"
   integrity sha512-AWK70LgRsRWL1TNw+aT0IlS56E0pobvFdr/en0K8XazyK4Ey6T/jXhQqv/iQ6FJAAU+somMzgmt9fWq2TaaOkA==
 
-"@types/hapi__hapi@*":
+"@types/hapi__hapi@*", "@types/hapi__hapi@^18.2.5":
   version "18.2.5"
   resolved "https://registry.yarnpkg.com/@types/hapi__hapi/-/hapi__hapi-18.2.5.tgz#37afc3db0380e89527bb850a0922f15da0bfe688"
   integrity sha512-hCAQVtE3OZCihJrn5SxQYmAkIdtE1BwAyvGkxwnPwP+IIe0MQxqbP2s0cwlAwimGOdDQ/ArH+7i6FGDKPlZhFQ==
