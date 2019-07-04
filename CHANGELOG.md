@@ -1,3 +1,11 @@
+## [1.1.4](https://github.com/abovejs/framework/compare/v1.1.3...v1.1.4) (2019-07-04)
+
+
+### Bug Fixes
+
+* incluir ultima versão do swagger ([861ec85](https://github.com/abovejs/framework/commit/861ec85))
+* singleton no server ([c4f6689](https://github.com/abovejs/framework/commit/c4f6689))
+
 ## [1.1.3](https://github.com/abovejs/framework/compare/v1.1.2...v1.1.3) (2019-07-04)
 
 
