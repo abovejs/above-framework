@@ -1,3 +1,5 @@
+import Hapi from '@hapi/hapi';
+import Joi from 'joi';
 import { BasePath } from './Helpers';
 
 if (process.env.NODE_ENV === 'test') {
@@ -33,5 +35,7 @@ export {
   IHttp,
   BaseException,
   Options,
-  Patch
+  Patch,
+  Hapi,
+  Joi
 };
