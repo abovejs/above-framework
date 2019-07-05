@@ -1,3 +1,11 @@
+## [1.2.4](https://github.com/abovejs/framework/compare/v1.2.3...v1.2.4) (2019-07-05)
+
+
+### Bug Fixes
+
+* corrigir env ([917166d](https://github.com/abovejs/framework/commit/917166d))
+* corrigir env ([be3108a](https://github.com/abovejs/framework/commit/be3108a))
+
 ## [1.2.3](https://github.com/abovejs/framework/compare/v1.2.2...v1.2.3) (2019-07-04)
 
 
