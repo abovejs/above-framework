@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/abovejs/framework/compare/v1.2.4...v1.2.5) (2019-07-05)
+
+
+### Bug Fixes
+
+* incluir [@types](https://github.com/types) ([8095f3f](https://github.com/abovejs/framework/commit/8095f3f))
+
 ## [1.2.4](https://github.com/abovejs/framework/compare/v1.2.3...v1.2.4) (2019-07-05)
 
 
