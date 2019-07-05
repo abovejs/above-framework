@@ -1,4 +1,16 @@
-import { RouteOptions, Server, Util } from '@hapi/hapi';
+import {
+  Request,
+  ResponseToolkit,
+  RouteOptions,
+  Server,
+  Util
+} from '@hapi/hapi';
+import { mappedSchema } from 'joi';
+import { IHttp } from '..';
+
+interface IRouteOptions extends RouteOptions {
+  statusCode?: number;
+}
 
 const methods = [];
 
@@ -21,16 +33,16 @@ export const Controller = (baseRoute: string = '') => {
   };
 };
 
-type MethodType = (http: any) => any;
+type MethodType<T extends mappedSchema> = (http: IHttp<T>) => Promise<any>;
 
 const request = (method: Util.HTTP_METHODS) => (
   baseUrl: string,
-  options?: RouteOptions
+  options?: IRouteOptions
 ) => {
   return (
     target: any,
     _key: string,
-    descriptor: TypedPropertyDescriptor<MethodType>
+    descriptor: TypedPropertyDescriptor<MethodType<typeof options.validate>>
   ) => {
     if (methods[target.constructor.name] === undefined) {
       methods[target.constructor.name] = [];
@@ -47,7 +59,15 @@ const request = (method: Util.HTTP_METHODS) => (
       options: {
         description: '',
         auth: 'jwt',
-        handler: (req, reply) => descriptor.value({ request: req, reply }),
+        handler: async (req: Request, reply: ResponseToolkit) => {
+          const response = await descriptor.value({ request: req, reply });
+          if (response && response.server && response.app) {
+            return response;
+          }
+          return reply
+            .response(response)
+            .code(options && options.statusCode ? options.statusCode : 200);
+        },
         tags: ['api'],
         ...options
       }

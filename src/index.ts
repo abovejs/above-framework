@@ -21,7 +21,7 @@ import {
   Post,
   Put
 } from './Annotations/Controller';
-import Bootstrap from './Bootstrap';
+import Bootstrap, { IApplication } from './Bootstrap';
 import BaseException from './Exceptions/BaseException';
 import IHttp from './typings/interface/IHttp';
 
@@ -37,5 +37,6 @@ export {
   Options,
   Patch,
   Hapi,
-  Joi
+  Joi,
+  IApplication
 };
