@@ -1,4 +1,4 @@
-import { Server } from 'hapi';
+import { Server } from '@hapi/hapi';
 import JWT from 'hapi-auth-jwt2';
 
 export default {

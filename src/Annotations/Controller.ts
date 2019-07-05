@@ -1,4 +1,4 @@
-import { RouteOptions, Server, Util } from 'hapi';
+import { RouteOptions, Server, Util } from '@hapi/hapi';
 
 const methods = [];
 

@@ -1,4 +1,4 @@
-import * as Hapi from 'hapi';
+import * as Hapi from '@hapi/hapi';
 import { BasePath } from '../Helpers';
 import RegisterPlugins from '../Plugins/RegisterPlugins';
 import RegisterRoutes from '../Routes/RegisterRoutes';
