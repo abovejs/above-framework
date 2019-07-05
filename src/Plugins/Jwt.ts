@@ -7,7 +7,7 @@ export default {
   register: async (server: Server) => {
     await server.register(JWT as any);
     server.auth.strategy('jwt', 'jwt', {
-      key: process.env.APP_JWT,
+      key: process.env.APP_JWT || process.env.JWT,
       verifyOptions: {
         ignoreExpiration: true,
         algorithms: ['HS256']
