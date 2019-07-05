@@ -24,6 +24,7 @@
   "dependencies": {
     "@hapi/inert": "^5.2.1",
     "@hapi/hapi": "^18.3.1",
+    "@types/hapi__hapi": "^18.2.5",
     "@hapi/joi": "^15.1.0",
     "@hapi/vision": "^5.5.0",
     "@types/hapi": "^18.0.2",
@@ -53,7 +54,6 @@
     "@types/dotenv": "^6.1.0",
     "@types/hapi-auth-jwt2": "^8.0.2",
     "@types/hapi__inert": "^5.2.0",
-    "@types/hapi__hapi": "^18.2.5",
     "@types/hapi__vision": "^5.5.0",
     "@types/joi": "^14.3.2",
     "@types/klaw-sync": "^6.0.0",
