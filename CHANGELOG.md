@@ -1,3 +1,10 @@
+## [1.2.6](https://github.com/abovejs/framework/compare/v1.2.5...v1.2.6) (2019-07-05)
+
+
+### Bug Fixes
+
+* corrigir [@types](https://github.com/types) hapi ([d6e101c](https://github.com/abovejs/framework/commit/d6e101c))
+
 ## [1.2.5](https://github.com/abovejs/framework/compare/v1.2.4...v1.2.5) (2019-07-05)
 
 
