@@ -1,3 +1,10 @@
+## [1.2.7](https://github.com/abovejs/framework/compare/v1.2.6...v1.2.7) (2019-07-05)
+
+
+### Bug Fixes
+
+* permitir return continue ([0e7c8f6](https://github.com/abovejs/framework/commit/0e7c8f6))
+
 ## [1.2.6](https://github.com/abovejs/framework/compare/v1.2.5...v1.2.6) (2019-07-05)
 
 
