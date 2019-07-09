@@ -34,7 +34,7 @@
     "bunyan-logstash-tcp": "^1.0.0",
     "dotenv": "^7.0.0",
     "hapi-auth-jwt2": "^8.3.0",
-    "hapi-swagger": "^10.0.2",
+    "hapi-swagger": "^7.10.0",
     "inert": "^5.1.2",
     "joi": "^14.3.1",
     "joi-extract-type": "^0.1.8",
