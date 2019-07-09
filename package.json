@@ -1,6 +1,6 @@
 {
   "name": "above-framework",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "Framework with hapijs",
   "main": "build/index.js",
   "typings": "build/typings/index.d.ts",
@@ -34,7 +34,7 @@
     "bunyan-logstash-tcp": "^1.0.0",
     "dotenv": "^7.0.0",
     "hapi-auth-jwt2": "^8.3.0",
-    "hapi-swagger": "^7.10.0",
+    "hapi-swagger": "9.4.2",
     "inert": "^5.1.2",
     "joi": "^14.3.1",
     "joi-extract-type": "^0.1.8",
