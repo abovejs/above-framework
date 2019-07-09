@@ -22,12 +22,12 @@
     "node": ">=8.9"
   },
   "dependencies": {
-    "@hapi/inert": "^5.2.1",
     "@hapi/hapi": "^18.3.1",
-    "@types/hapi__hapi": "^18.2.5",
+    "@hapi/inert": "^5.2.1",
     "@hapi/joi": "^15.1.0",
     "@hapi/vision": "^5.5.0",
     "@types/hapi": "^18.0.2",
+    "@types/hapi__hapi": "^18.2.5",
     "abstract-logging": "^1.0.0",
     "boom": "^7.3.0",
     "bunyan": "^1.8.12",
