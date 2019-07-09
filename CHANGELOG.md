@@ -1,3 +1,10 @@
+## [1.2.8](https://github.com/abovejs/framework/compare/v1.2.7...v1.2.8) (2019-07-09)
+
+
+### Bug Fixes
+
+* corrigir nome do projeto ([ed64ad0](https://github.com/abovejs/framework/commit/ed64ad0))
+
 ## [1.2.7](https://github.com/abovejs/framework/compare/v1.2.6...v1.2.7) (2019-07-05)
 
 
