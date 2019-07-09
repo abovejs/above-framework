@@ -1,3 +1,10 @@
+## [1.2.9](https://github.com/abovejs/framework/compare/v1.2.8...v1.2.9) (2019-07-09)
+
+
+### Bug Fixes
+
+* voltar versão do swagger ([89f8cc2](https://github.com/abovejs/framework/commit/89f8cc2))
+
 ## [1.2.8](https://github.com/abovejs/framework/compare/v1.2.7...v1.2.8) (2019-07-09)
 
 
