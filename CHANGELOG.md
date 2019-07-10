@@ -1,3 +1,10 @@
+## [1.2.11](https://github.com/abovejs/framework/compare/v1.2.10...v1.2.11) (2019-07-10)
+
+
+### Bug Fixes
+
+* corrigir logs ([7b1c6c6](https://github.com/abovejs/framework/commit/7b1c6c6))
+
 ## [1.2.10](https://github.com/abovejs/framework/compare/v1.2.9...v1.2.10) (2019-07-09)
 
 
