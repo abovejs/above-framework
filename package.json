@@ -39,6 +39,7 @@
     "joi": "^14.3.1",
     "joi-extract-type": "^0.1.8",
     "klaw-sync": "^6.0.0",
+    "md5": "^2.2.1",
     "ramda": "^0.26.1",
     "youch": "^2.0.10",
     "youch-terminal": "^1.0.0"
@@ -57,6 +58,7 @@
     "@types/hapi__vision": "^5.5.0",
     "@types/joi": "^14.3.2",
     "@types/klaw-sync": "^6.0.0",
+    "@types/md5": "^2.1.33",
     "@types/node": "^11.11.7",
     "@types/ramda": "^0.26.15",
     "@types/vision": "^5.3.6",

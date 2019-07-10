@@ -1,4 +1,5 @@
 import Hapi from '@hapi/hapi';
+import md5 from 'md5';
 import Youch from 'youch';
 import forTerminal from 'youch-terminal';
 import { filterOfBaseException } from './Error';
@@ -26,12 +27,16 @@ const Server = () => {
       }
     }
   });
-
+  const showLog = [];
   if (process.env.NODE_ENV !== 'test') {
-    server.events.on('log', (_event, tags) => {
+    server.events.on('request', (_event, tags) => {
       if (tags.error) {
         new Youch(tags.error, {}).toJSON().then(output => {
-          console.error(forTerminal(output));
+          const key = md5(JSON.stringify(output));
+          if(showLog[key]){
+            console.error(forTerminal(output));
+            showLog[key] = true;
+          }
         });
       }
     });
