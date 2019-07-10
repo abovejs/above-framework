@@ -2,7 +2,6 @@ import Hapi from '@hapi/hapi';
 import Youch from 'youch';
 import forTerminal from 'youch-terminal';
 import { filterOfBaseException } from './Error';
-import BaseException from '../Exceptions/BaseException';
 
 const debug = {
   log: ['error', 'database', 'read']
