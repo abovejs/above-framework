@@ -2,6 +2,7 @@ import Hapi from '@hapi/hapi';
 import Youch from 'youch';
 import forTerminal from 'youch-terminal';
 import { filterOfBaseException } from './Error';
+import BaseException from '../Exceptions/BaseException';
 
 const debug = {
   log: ['error', 'database', 'read']
@@ -28,7 +29,7 @@ const Server = () => {
   });
 
   if (process.env.NODE_ENV !== 'test') {
-    server.events.on('request', (_event, tags) => {
+    server.events.on('log', (_event, tags) => {
       if (tags.error) {
         new Youch(tags.error, {}).toJSON().then(output => {
           console.error(forTerminal(output));

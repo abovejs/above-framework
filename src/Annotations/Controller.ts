@@ -5,7 +5,6 @@ import {
   Server,
   Util
 } from '@hapi/hapi';
-import { mappedSchema } from 'joi';
 import { IHttp } from '..';
 
 interface IRouteOptions extends RouteOptions {
@@ -33,7 +32,7 @@ export const Controller = (baseRoute: string = '') => {
   };
 };
 
-type MethodType<T extends mappedSchema> = (http: IHttp<T>) => Promise<any>;
+type MethodType = (http: IHttp) => Promise<any>;
 
 const request = (method: Util.HTTP_METHODS) => (
   baseUrl: string,
@@ -42,7 +41,7 @@ const request = (method: Util.HTTP_METHODS) => (
   return (
     target: any,
     _key: string,
-    descriptor: TypedPropertyDescriptor<MethodType<typeof options.validate>>
+    descriptor: TypedPropertyDescriptor<MethodType>
   ) => {
     if (methods[target.constructor.name] === undefined) {
       methods[target.constructor.name] = [];
@@ -59,15 +58,7 @@ const request = (method: Util.HTTP_METHODS) => (
       options: {
         description: '',
         auth: 'jwt',
-        handler: async (req: Request, reply: ResponseToolkit) => {
-          const response = await descriptor.value({ request: req, reply });
-          if (response && response.server && response.app) {
-            return response;
-          }
-          return reply
-            .response(response)
-            .code(options && options.statusCode ? options.statusCode : 200);
-        },
+        handler: async (req: Request, reply: ResponseToolkit) => descriptor.value({ request: req, reply }),
         tags: ['api'],
         ...options
       }
