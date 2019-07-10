@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/abovejs/framework/compare/v1.3.1...v1.3.2) (2019-07-10)
+
+
+### Bug Fixes
+
+* corrigir interface ([070f075](https://github.com/abovejs/framework/commit/070f075))
+
 ## [1.3.1](https://github.com/abovejs/framework/compare/v1.3.0...v1.3.1) (2019-07-10)
 
 
