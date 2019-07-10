@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/abovejs/framework/compare/v1.3.0...v1.3.1) (2019-07-10)
+
+
+### Bug Fixes
+
+* corrigir showLog ([caa8dae](https://github.com/abovejs/framework/commit/caa8dae))
+
 # [1.3.0](https://github.com/abovejs/framework/compare/v1.2.11...v1.3.0) (2019-07-10)
 
 
