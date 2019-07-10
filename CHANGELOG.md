@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/abovejs/framework/compare/v1.2.11...v1.3.0) (2019-07-10)
+
+
+### Features
+
+* não dar dois console.log de erro ([2de2510](https://github.com/abovejs/framework/commit/2de2510))
+
 ## [1.2.11](https://github.com/abovejs/framework/compare/v1.2.10...v1.2.11) (2019-07-10)
 
 
