@@ -9,7 +9,7 @@ export interface IApplication {
     authenticate: () => Promise<any>;
   };
   plugins?: Array<Hapi.Plugin<any>>;
-  beforeStart: (server: Hapi.Server) => Promise<any>;
+  beforeStart?: (server: Hapi.Server) => Promise<any>;
   path?: string;
 }
 
