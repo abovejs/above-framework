@@ -33,7 +33,7 @@ const Server = () => {
       if (tags.error) {
         new Youch(tags.error, {}).toJSON().then(output => {
           const key = md5(JSON.stringify(output));
-          if(showLog[key]){
+          if(!showLog[key]){
             console.error(forTerminal(output));
             showLog[key] = true;
           }
