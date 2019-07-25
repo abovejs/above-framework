@@ -5,10 +5,11 @@ import {
   Server,
   Util
 } from '@hapi/hapi';
+import Joi from 'joi';
 import { IHttp } from '..';
 
 interface IRouteOptions extends RouteOptions {
-  statusCode?: number;
+  records?: boolean;
 }
 
 const methods = [];
@@ -52,15 +53,52 @@ const request = (method: Util.HTTP_METHODS) => (
         failAction: 'ignore'
       };
     }
+
+    if (options.records) {
+      const paginate = {
+        limit: Joi.number().default(50),
+        offset: Joi.number().default(0)
+      };
+      if (!options.validate || (options.validate && !options.validate.query)) {
+        options.validate = {
+          ...options.validate,
+          query: Joi.object().keys(paginate)
+        };
+      } else if (options.validate && options.validate.query) {
+        options.validate = {
+          ...options.validate,
+          // @ts-ignore
+          query: options.validate.query.append(paginate)
+        };
+      }
+    }
+
     methods[target.constructor.name].push({
       method,
       path: `{baseRoute}${baseUrl === '/' ? '' : baseUrl}`,
       options: {
         description: '',
         auth: 'jwt',
-        handler: async (req: Request, reply: ResponseToolkit) => descriptor.value({ request: req, reply }),
+        handler: async (req: Request, reply: ResponseToolkit) => {
+          const response = await descriptor.value({ request: req, reply });
+          if (options.records) {
+            const { source } = response;
+            const records = source instanceof Array ? source : [source];
+            response.source = {
+              meta: {
+                server: require('os').hostname(),
+                offset: req.query.offset,
+                limit: req.query.limit,
+                recordCount: records.length
+              },
+              records
+            };
+          }
+          return response;
+        },
         tags: ['api'],
-        ...options
+        ...options,
+        records: undefined
       }
     });
     return descriptor;
