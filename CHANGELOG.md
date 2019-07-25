@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/abovejs/framework/compare/v1.4.0...v1.5.0) (2019-07-25)
+
+
+### Features
+
+* customizar paginate ([753284e](https://github.com/abovejs/framework/commit/753284e))
+
 # [1.4.0](https://github.com/abovejs/framework/compare/v1.3.2...v1.4.0) (2019-07-25)
 
 
