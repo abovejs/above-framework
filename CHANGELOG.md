@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/abovejs/framework/compare/v1.3.2...v1.4.0) (2019-07-25)
+
+
+### Features
+
+* permitir que seja possível o records ([0c4a085](https://github.com/abovejs/framework/commit/0c4a085))
+
 ## [1.3.2](https://github.com/abovejs/framework/compare/v1.3.1...v1.3.2) (2019-07-10)
 
 
