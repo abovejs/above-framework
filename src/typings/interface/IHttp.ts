@@ -12,7 +12,12 @@ type Diff<
 
 type Omit<T, K extends keyof T> = { [P in Diff<keyof T, K>]: T[P] };
 
-type IRequest<T> = Omit<Request, 'payload' | 'params' | 'query'> & T;
+type IRequest<T> = Omit<Request, 'payload' | 'params' | 'query'> & T & {
+  paginate: {
+    limit: number,
+    offset: number
+  }
+};
 
 interface IHttp<
   T extends mappedSchema = {
