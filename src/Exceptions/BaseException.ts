@@ -13,9 +13,9 @@ abstract class BaseException extends Error {
   public getResponse() {
     return {
       ...this.payload,
-      moreInfo: "http://www.developer.apiluiza.com.br/errors",
-      errorName: this.constructor.name,
-    }
+      moreInfo: 'http://www.developer.apiluiza.com.br/errors',
+      errorName: this.constructor.name
+    };
   }
 }
 
