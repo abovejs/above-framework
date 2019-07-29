@@ -2,6 +2,7 @@ import Hapi from '@hapi/hapi';
 import md5 from 'md5';
 import Youch from 'youch';
 import forTerminal from 'youch-terminal';
+import BaseException from '../Exceptions/BaseException';
 import { filterOfBaseException } from './Error';
 
 const debug = {
@@ -30,10 +31,10 @@ const Server = () => {
   const showLog = [];
   if (process.env.NODE_ENV !== 'test') {
     server.events.on('request', (_event, tags) => {
-      if (tags.error) {
+      if (tags.error && !(tags.error instanceof BaseException)) {
         new Youch(tags.error, {}).toJSON().then(output => {
           const key = md5(JSON.stringify(output));
-          if(!showLog[key]){
+          if (!showLog[key]) {
             console.error(forTerminal(output));
             showLog[key] = true;
           }

@@ -11,12 +11,22 @@ export interface IApplication {
   plugins?: Array<Hapi.Plugin<any>>;
   beforeStart?: (server: Hapi.Server) => Promise<any>;
   path?: string;
+  route?: IRoute;
 }
 
-const configureServer = async (server: Hapi.Server) => {
+interface IRoute{
+  controller: any,
+  version: string;
+}
+
+const configureServer = async (server: Hapi.Server, route?:IRoute) => {
   try {
     await RegisterPlugins(server);
-    await RegisterRoutes(server);
+    if(!route){
+      await RegisterRoutes(server);
+    }else{
+      new route.controller(server, route.version);
+    }
     return true;
   } catch {
     return false;
@@ -27,7 +37,8 @@ const Bootstrap = async ({
   path,
   database,
   plugins,
-  beforeStart
+  beforeStart,
+  route
 }: IApplication) => {
   const server = Server();
   if (path) {
@@ -36,7 +47,7 @@ const Bootstrap = async ({
   if (database) {
     await database.authenticate();
   }
-  await configureServer(server);
+  await configureServer(server, route);
 
   if (plugins && plugins.length) {
     await server.register(plugins);
