@@ -1,3 +1,15 @@
+# [1.6.0](https://github.com/abovejs/framework/compare/v1.5.0...v1.6.0) (2019-07-29)
+
+
+### Bug Fixes
+
+* corrigir importações ([c453d68](https://github.com/abovejs/framework/commit/c453d68))
+
+
+### Features
+
+* permitir carregar apenas um arquivo ([8f30ee9](https://github.com/abovejs/framework/commit/8f30ee9))
+
 # [1.5.0](https://github.com/abovejs/framework/compare/v1.4.0...v1.5.0) (2019-07-25)
 
 
