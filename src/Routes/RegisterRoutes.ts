@@ -38,7 +38,6 @@ const RegisterRoutes = async (server: Server) => {
       const controller = require(file.path).default;
       return new controller(server, version);
     } catch (err) {
-      console.log(err);
       return false;
     }
   });

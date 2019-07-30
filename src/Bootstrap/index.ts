@@ -14,17 +14,17 @@ export interface IApplication {
   route?: IRoute;
 }
 
-interface IRoute{
-  controller: any,
+interface IRoute {
+  controller: any;
   version: string;
 }
 
-const configureServer = async (server: Hapi.Server, route?:IRoute) => {
+const configureServer = async (server: Hapi.Server, route?: IRoute) => {
   try {
     await RegisterPlugins(server);
-    if(!route){
+    if (!route) {
       await RegisterRoutes(server);
-    }else{
+    } else {
       new route.controller(server, route.version);
     }
     return true;
