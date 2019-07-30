@@ -1,3 +1,11 @@
+## [1.6.1](https://github.com/abovejs/framework/compare/v1.6.0...v1.6.1) (2019-07-30)
+
+
+### Bug Fixes
+
+* corrigir machine ([bb239fd](https://github.com/abovejs/framework/commit/bb239fd))
+* não mostrar erro de slug ([5646284](https://github.com/abovejs/framework/commit/5646284))
+
 # [1.6.0](https://github.com/abovejs/framework/compare/v1.5.0...v1.6.0) (2019-07-29)
 
 
