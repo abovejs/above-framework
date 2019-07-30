@@ -83,27 +83,33 @@ const request = (method: Util.HTTP_METHODS) => (
         handler: async (req: Request, reply: ResponseToolkit) => {
           let paginate = {
             offset: 0,
-            limit: 50,
+            limit: 50
           };
-          if(options.paginate){
+          if (options.paginate) {
             paginate = {
               offset: Number(req.query.offset),
-              limit: Number(req.query.limit),
-            }
+              limit: Number(req.query.limit)
+            };
           }
-          const response = await descriptor.value({ request: {
-            ...req,
-            paginate: {
-             ...paginate,
-            }
-            }, reply });
+          const response = await descriptor.value({
+            request: {
+              ...req,
+              paginate: {
+                ...paginate
+              }
+            },
+            reply
+          });
           if (options.records) {
             const { source } = response;
             const records = source instanceof Array ? source : [source];
 
             response.source = {
               meta: {
-                server: require('os').hostname(),
+                server:
+                  process.env.NODE_ENV === 'test'
+                    ? 'machine.testing.local'
+                    : require('os').hostname(),
                 ...paginate,
                 recordCount: records.length
               },
@@ -115,7 +121,7 @@ const request = (method: Util.HTTP_METHODS) => (
         tags: ['api'],
         ...options,
         records: undefined,
-        paginate: undefined,
+        paginate: undefined
       }
     });
     return descriptor;
