@@ -1,3 +1,10 @@
+## [1.6.3](https://github.com/abovejs/framework/compare/v1.6.2...v1.6.3) (2019-07-31)
+
+
+### Bug Fixes
+
+* incluir logs de carregamento ([6514e35](https://github.com/abovejs/framework/commit/6514e35))
+
 ## [1.6.2](https://github.com/abovejs/framework/compare/v1.6.1...v1.6.2) (2019-07-31)
 
 
