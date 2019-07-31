@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/abovejs/framework/compare/v1.6.1...v1.6.2) (2019-07-31)
+
+
+### Bug Fixes
+
+* enable show errors ([0dc2602](https://github.com/abovejs/framework/commit/0dc2602))
+
 ## [1.6.1](https://github.com/abovejs/framework/compare/v1.6.0...v1.6.1) (2019-07-30)
 
 
