@@ -1,3 +1,10 @@
+## [1.6.7](https://github.com/abovejs/framework/compare/v1.6.6...v1.6.7) (2019-08-01)
+
+
+### Bug Fixes
+
+* remover console.log ([d6f2cf2](https://github.com/abovejs/framework/commit/d6f2cf2))
+
 ## [1.6.6](https://github.com/abovejs/framework/compare/v1.6.5...v1.6.6) (2019-08-01)
 
 
