@@ -40,25 +40,34 @@ const Bootstrap = async ({
   beforeStart,
   route
 }: IApplication) => {
+  console.log('1. Carrega projeto.');
   const server = Server();
+  console.log('2. O Servidor foi criado.');
 
   if (path) {
     BasePath.folder = path;
+    console.log('3. O Path foi setado.');
   }
 
   await configureServer(server, route);
+  console.log('4. Servidor configurado.');
 
   if (plugins && plugins.length) {
     await server.register(plugins);
   }
 
+  console.log('5. Configurou plugin extras');
+
   if (beforeStart) {
     await beforeStart(server);
   }
 
+  console.log('6. Rodou beforeStart');
+
   try {
     if (database) {
       await database.authenticate();
+      console.log('7. Autenticou no banco');
     }
   } catch (error) {
     console.log(error);
@@ -66,6 +75,8 @@ const Bootstrap = async ({
 
   if (process.env.NODE_ENV !== 'test') {
     await server.start();
+    console.log('8. Iniciou servidor');
+
     console.info(`Server running: ${server.info.uri}`);
   }
   return server;

@@ -6,12 +6,12 @@ import Log, { ILogstashOptions } from './Log';
 import Swagger from './Swagger';
 
 const RegisterPlugins = async (server: Hapi.Server) => {
-  if (process.env.NODE_ENV !== 'production') {
-    await server.register({
-      plugin: Swagger
-    });
-  }
+  console.log('1.1 - Inicia configuração de plugins.');
+  await server.register({
+    plugin: Swagger
+  });
 
+  console.log('1.2 - Configura JWT.');
   await server.register({
     plugin: Jwt
   });
