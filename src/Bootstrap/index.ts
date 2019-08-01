@@ -41,12 +41,11 @@ const Bootstrap = async ({
   route
 }: IApplication) => {
   const server = Server();
+
   if (path) {
     BasePath.folder = path;
   }
-  if (database) {
-    await database.authenticate();
-  }
+
   await configureServer(server, route);
 
   if (plugins && plugins.length) {
@@ -55,6 +54,14 @@ const Bootstrap = async ({
 
   if (beforeStart) {
     await beforeStart(server);
+  }
+
+  try {
+    if (database) {
+      await database.authenticate();
+    }
+  } catch (error) {
+    console.log(error);
   }
 
   if (process.env.NODE_ENV !== 'test') {

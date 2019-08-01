@@ -35,6 +35,7 @@ const RegisterRoutes = async (server: Server) => {
         .replace(rootApi, '')
         .replace(rootApp, '')
         .split('/')[1];
+      console.log(file.path);
       const controller = require(file.path).default;
       return new controller(server, version);
     } catch (err) {
