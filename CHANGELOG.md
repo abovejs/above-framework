@@ -1,3 +1,10 @@
+## [1.7.5](https://github.com/abovejs/framework/compare/v1.7.4...v1.7.5) (2019-08-01)
+
+
+### Bug Fixes
+
+* corrigir autoload de jwt ([8f659e2](https://github.com/abovejs/framework/commit/8f659e2))
+
 ## [1.7.4](https://github.com/abovejs/framework/compare/v1.7.3...v1.7.4) (2019-08-01)
 
 
