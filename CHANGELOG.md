@@ -1,3 +1,10 @@
+## [1.6.5](https://github.com/abovejs/framework/compare/v1.6.4...v1.6.5) (2019-08-01)
+
+
+### Bug Fixes
+
+* incluir muitos console.log ([3abd227](https://github.com/abovejs/framework/commit/3abd227))
+
 ## [1.6.4](https://github.com/abovejs/framework/compare/v1.6.3...v1.6.4) (2019-08-01)
 
 
