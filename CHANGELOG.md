@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/abovejs/framework/compare/v1.7.0...v1.7.1) (2019-08-01)
+
+
+### Bug Fixes
+
+* incluindo html ([5f92b05](https://github.com/abovejs/framework/commit/5f92b05))
+
 # [1.7.0](https://github.com/abovejs/framework/compare/v1.6.8...v1.7.0) (2019-08-01)
 
 
