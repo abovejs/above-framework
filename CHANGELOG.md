@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/abovejs/framework/compare/v1.6.8...v1.7.0) (2019-08-01)
+
+
+### Features
+
+* incluir JWT na description do Swagger ([5c2ebc5](https://github.com/abovejs/framework/commit/5c2ebc5))
+
 ## [1.6.8](https://github.com/abovejs/framework/compare/v1.6.7...v1.6.8) (2019-08-01)
 
 
