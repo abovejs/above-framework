@@ -1,3 +1,10 @@
+## [1.7.3](https://github.com/abovejs/framework/compare/v1.7.2...v1.7.3) (2019-08-01)
+
+
+### Bug Fixes
+
+* so mostrar o token em ambiente de development ([0b41a23](https://github.com/abovejs/framework/commit/0b41a23))
+
 ## [1.7.2](https://github.com/abovejs/framework/compare/v1.7.1...v1.7.2) (2019-08-01)
 
 
