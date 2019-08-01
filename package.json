@@ -1,6 +1,6 @@
 {
   "name": "above-framework",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "description": "Framework with hapijs",
   "main": "build/index.js",
   "typings": "build/typings/index.d.ts",

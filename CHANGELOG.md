@@ -1,3 +1,10 @@
+## [1.6.4](https://github.com/abovejs/framework/compare/v1.6.3...v1.6.4) (2019-08-01)
+
+
+### Bug Fixes
+
+* incluir console.log ([e32ae99](https://github.com/abovejs/framework/commit/e32ae99))
+
 ## [1.6.3](https://github.com/abovejs/framework/compare/v1.6.2...v1.6.3) (2019-07-31)
 
 
