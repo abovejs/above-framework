@@ -1,6 +1,7 @@
 import Inert from '@hapi/inert';
 import Vision from '@hapi/vision';
 import hapiSwagger from 'hapi-swagger';
+import jwt from 'jsonwebtoken';
 import { BasePath } from '../Helpers';
 
 const Swagger = {
@@ -11,7 +12,9 @@ const Swagger = {
       info: {
         title: require(BasePath.get('../package.json')).name,
         version: require(BasePath.get('../package.json')).version,
-        description: require(BasePath.get('../package.json')).description
+        description: `${
+          require(BasePath.get('../package.json')).description
+        }\nJWT: ${jwt.sign({}, process.env.APP_JWT || process.env.JWT)}`
       },
       securityDefinitions: {
         jwt: {
@@ -38,7 +41,7 @@ const Swagger = {
       {
         plugin: hapiSwagger,
         options: {
-          ...swaggerOptions,
+          ...swaggerOptions
         }
       }
     ]);
