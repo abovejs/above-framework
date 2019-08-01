@@ -26,7 +26,6 @@ export const Controller = (baseRoute: string = '') => {
           path: `/${prefix}${item.path.replace('{baseRoute}', baseRoute)}`
         });
       });
-      console.log('Registrar as seguintes rotas', routes);
       server.route(routes);
       return original;
     };
@@ -74,8 +73,6 @@ const request = (method: Util.HTTP_METHODS) => (
         };
       }
     }
-
-    console.log('Registre: ', target.constructor.name);
 
     methods[target.constructor.name].push({
       method,

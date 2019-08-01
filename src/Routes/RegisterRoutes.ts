@@ -10,11 +10,8 @@ const getFiles = (root: string) => {
       ...item,
       filename: path.basename(item.path)
     }));
-    console.log('Arquivos para serem carregados', files);
-
     return files;
-  } catch (error) {
-    console.log('Errrou', error);
+  } catch {
     return [];
   }
 };
@@ -38,11 +35,9 @@ const RegisterRoutes = async (server: Server) => {
         .replace(rootApi, '')
         .replace(rootApp, '')
         .split('/')[1];
-      console.log('Carregar a seguinte controller', file.path);
       const controller = require(file.path).default;
       return new controller(server, version);
-    } catch (error) {
-      console.log('Errrou', error);
+    } catch {
       return false;
     }
   });
