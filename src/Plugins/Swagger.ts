@@ -31,7 +31,6 @@ const Swagger = {
               }
               var apiKeyAuth = new SwaggerClient.ApiKeyAuthorization(auth.name, key, auth.in);
               window.swaggerUi.api.clientAuthorizations.add(auth.name, apiKeyAuth);
-              log("added key " + key);
             }
           }
         }
