@@ -13,7 +13,8 @@ const getFiles = (root: string) => {
     console.log('Arquivos para serem carregados', files);
 
     return files;
-  } catch {
+  } catch (error) {
+    console.log('Errrou', error);
     return [];
   }
 };
@@ -40,8 +41,8 @@ const RegisterRoutes = async (server: Server) => {
       console.log('Carregar a seguinte controller', file.path);
       const controller = require(file.path).default;
       return new controller(server, version);
-    } catch (err) {
-      console.log(err);
+    } catch (error) {
+      console.log('Errrou', error);
       return false;
     }
   });

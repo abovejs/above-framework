@@ -28,7 +28,8 @@ const configureServer = async (server: Hapi.Server, route?: IRoute) => {
       new route.controller(server, route.version);
     }
     return true;
-  } catch {
+  } catch (error) {
+    console.log('Errrou', error);
     return false;
   }
 };
@@ -70,13 +71,13 @@ const Bootstrap = async ({
       console.log('7. Autenticou no banco');
     }
   } catch (error) {
+    console.log('errou banco');
     console.log(error);
   }
 
   if (process.env.NODE_ENV !== 'test') {
     await server.start();
     console.log('8. Iniciou servidor');
-
     console.info(`Server running: ${server.info.uri}`);
   }
   return server;
