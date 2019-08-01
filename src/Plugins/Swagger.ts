@@ -23,7 +23,17 @@ const Swagger = {
             {},
             process.env.APP_JWT || process.env.JWT
           )}';
-          addApiKeyAuthorization();
+          if($('#input_apiKey')){
+            var key = $('#input_apiKey')[0].value;
+            if (key && key.trim() != "") {
+              if('' !== ''){
+                key = '' + key;
+              }
+              var apiKeyAuth = new SwaggerClient.ApiKeyAuthorization(auth.name, key, auth.in);
+              window.swaggerUi.api.clientAuthorizations.add(auth.name, apiKeyAuth);
+              log("added key " + key);
+            }
+          }
         }
         </script>`
             : ''
