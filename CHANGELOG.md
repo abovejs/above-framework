@@ -1,3 +1,10 @@
+## [1.6.8](https://github.com/abovejs/framework/compare/v1.6.7...v1.6.8) (2019-08-01)
+
+
+### Bug Fixes
+
+* corrigir cookie ([9830e51](https://github.com/abovejs/framework/commit/9830e51))
+
 ## [1.6.7](https://github.com/abovejs/framework/compare/v1.6.6...v1.6.7) (2019-08-01)
 
 
