@@ -17,7 +17,14 @@ const Swagger = {
         }<br /><strong>JWT:</strong> <i>${jwt.sign(
           {},
           process.env.APP_JWT || process.env.JWT
-        )}</i>`
+        )}</i><script type="text/javascript">
+        window.onload = function(){
+          document.querySelector("input[name='apiKey']").value = '${jwt.sign(
+            {},
+            process.env.APP_JWT || process.env.JWT
+          )}';
+        }
+        </script>`
       },
       securityDefinitions: {
         jwt: {
