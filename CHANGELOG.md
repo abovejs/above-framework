@@ -1,3 +1,10 @@
+## [1.7.4](https://github.com/abovejs/framework/compare/v1.7.3...v1.7.4) (2019-08-01)
+
+
+### Bug Fixes
+
+* carregar depois de inserir ([7fc05d5](https://github.com/abovejs/framework/commit/7fc05d5))
+
 ## [1.7.3](https://github.com/abovejs/framework/compare/v1.7.2...v1.7.3) (2019-08-01)
 
 
