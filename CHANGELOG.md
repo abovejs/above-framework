@@ -1,3 +1,10 @@
+## [1.7.2](https://github.com/abovejs/framework/compare/v1.7.1...v1.7.2) (2019-08-01)
+
+
+### Bug Fixes
+
+* automate inject jwt ([6194d71](https://github.com/abovejs/framework/commit/6194d71))
+
 ## [1.7.1](https://github.com/abovejs/framework/compare/v1.7.0...v1.7.1) (2019-08-01)
 
 
