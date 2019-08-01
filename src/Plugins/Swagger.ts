@@ -12,12 +12,12 @@ const Swagger = {
       info: {
         title: require(BasePath.get('../package.json')).name,
         version: require(BasePath.get('../package.json')).version,
-        description: `${
-          require(BasePath.get('../package.json')).description
-        }<br /><strong>JWT:</strong> <i>${jwt.sign(
-          {},
-          process.env.APP_JWT || process.env.JWT
-        )}</i><script type="text/javascript">
+        description: `${require(BasePath.get('../package.json')).description}${
+          process.env.NODE_ENV === 'development'
+            ? `<br /><strong>JWT:</strong> <i>${jwt.sign(
+                {},
+                process.env.APP_JWT || process.env.JWT
+              )}</i><script type="text/javascript">
         window.onload = function(){
           document.querySelector("input[name='apiKey']").value = '${jwt.sign(
             {},
@@ -25,6 +25,8 @@ const Swagger = {
           )}';
         }
         </script>`
+            : ''
+        }`
       },
       securityDefinitions: {
         jwt: {
