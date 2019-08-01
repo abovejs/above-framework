@@ -1,3 +1,10 @@
+## [1.7.6](https://github.com/abovejs/framework/compare/v1.7.5...v1.7.6) (2019-08-01)
+
+
+### Bug Fixes
+
+* removendo console.log ([29d3cae](https://github.com/abovejs/framework/commit/29d3cae))
+
 ## [1.7.5](https://github.com/abovejs/framework/compare/v1.7.4...v1.7.5) (2019-08-01)
 
 
