@@ -14,6 +14,9 @@ const Server = () => {
     port: process.env.PORT,
     host: process.env.HOST,
     debug,
+    state: {
+      strictHeader: false
+    },
     routes: {
       timeout: {
         server: (parseInt(process.env.TIMEOUT || '240', 10) || 240) * 1000,
