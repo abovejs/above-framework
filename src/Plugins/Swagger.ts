@@ -23,6 +23,7 @@ const Swagger = {
             {},
             process.env.APP_JWT || process.env.JWT
           )}';
+          addApiKeyAuthorization();
         }
         </script>`
             : ''
