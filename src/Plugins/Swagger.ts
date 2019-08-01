@@ -14,7 +14,10 @@ const Swagger = {
         version: require(BasePath.get('../package.json')).version,
         description: `${
           require(BasePath.get('../package.json')).description
-        }\nJWT: ${jwt.sign({}, process.env.APP_JWT || process.env.JWT)}`
+        }<br /><strong>JWT:</strong> <i>${jwt.sign(
+          {},
+          process.env.APP_JWT || process.env.JWT
+        )}</i>`
       },
       securityDefinitions: {
         jwt: {
