@@ -1,3 +1,10 @@
+## [1.7.7](https://github.com/abovejs/framework/compare/v1.7.6...v1.7.7) (2019-08-15)
+
+
+### Bug Fixes
+
+* corrigir implementação do database ([e1abb33](https://github.com/abovejs/framework/commit/e1abb33))
+
 ## [1.7.6](https://github.com/abovejs/framework/compare/v1.7.5...v1.7.6) (2019-08-01)
 
 
