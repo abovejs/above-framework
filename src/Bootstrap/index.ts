@@ -55,7 +55,9 @@ const Bootstrap = async ({
     await beforeStart(server);
   }
 
-  await database.authenticate();
+  if (database && database.authenticate) {
+    await database.authenticate();
+  }
 
   if (process.env.NODE_ENV !== 'test') {
     await server.start();
