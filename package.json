@@ -1,7 +1,7 @@
 {
   "name": "above-framework",
   "version": "1.7.7",
-  "description": "Framework with hapijs",
+  "description": "Node.js Framework with hapijs",
   "main": "build/index.js",
   "typings": "build/index.d.ts",
   "repository": "https://github.com/abovejs/framework",
