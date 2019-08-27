@@ -1,3 +1,20 @@
+# [2.0.0](https://github.com/abovejs/framework/compare/v1.7.7...v2.0.0) (2019-08-27)
+
+
+### Code Refactoring
+
+* 💡 update all projeto for new styled ([091b780](https://github.com/abovejs/framework/commit/091b780))
+
+
+### Features
+
+* 🎸 delete all files of projeto initial ([e3a2215](https://github.com/abovejs/framework/commit/e3a2215))
+
+
+### BREAKING CHANGES
+
+* change of bootstrap for ignitor
+
 ## [1.7.7](https://github.com/abovejs/framework/compare/v1.7.6...v1.7.7) (2019-08-15)
 
 
