@@ -25,6 +25,15 @@ jobs:
     working_directory: ~/above-framework
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm install
       - run: npm run build
       - run: npm run semantic-release
