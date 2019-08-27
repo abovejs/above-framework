@@ -12,3 +12,16 @@ build/docs
 coverage
 .nyc_output
 *.log
+.circleci
+example
+node_modules
+.editorconfig
+.eslintignore
+.eslintrc.json
+.gitignore
+.npmignore
+.prettierignore
+.prettierrc.js
+commitlint.config.js
+jest.config.js
+tsconfig.json

@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  'test':
+  build:
     docker:
       - image: circleci/node:latest
     working_directory: ~/above-framework
@@ -18,8 +18,25 @@ jobs:
       - run: npm test
       - run: npm run lint
 
+  publish:
+    docker:
+      - image: circleci/node:latest
+    working_directory: ~/above-framework
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - run: npm run semantic-release
+
 workflows:
   version: 2
   build:
     jobs:
-      - 'test'
+      - build
+      - publish:
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - build
