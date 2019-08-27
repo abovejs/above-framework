@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
+      "args": ["${workspaceRoot}/example/index.ts"],
+      "cwd": "${workspaceRoot}",
+      "protocol": "inspector",
+      "env": {
+        "TS_NODE_TRANSPILE_ONLY": "true"
+      }
+    }
+  ]
+}

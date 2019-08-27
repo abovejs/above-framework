@@ -1,0 +1,78 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": ".",
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "env": {
+    "node": true,
+    "jest/globals": true
+  },
+  "plugins": ["@typescript-eslint", "prettier", "jest"],
+  "extends": [
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".ts"]
+      }
+    }
+  },
+  "rules": {
+    "import/no-dynamic-require": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-ts-ignore": "off",
+    "import/no-cycle": "off",
+    "class-methods-use-this": "off",
+    "@typescript-eslint/no-parameter-properties": "off",
+    "no-empty-function": "off",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "no-useless-constructor": "off",
+    "import/named": "off",
+    "import/export": "off",
+    "import/no-unresolved": "off",
+    "import/prefer-default-export": "off",
+    "no-unused-expressions": [
+      "warn",
+      {
+        "allowShortCircuit": true,
+        "allowTernary": true
+      }
+    ],
+    "@typescript-eslint/interface-name-prefix": "off",
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        "groups": ["external"]
+      }
+    ],
+    "operator-linebreak": "off",
+    "global-require": "off",
+    "@typescript-eslint/prefer-interface": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": true,
+        "trailingComma": "all",
+        "singleQuote": true,
+        "printWidth": 120,
+        "tabWidth": 2
+      }
+    ],
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error"
+  }
+}

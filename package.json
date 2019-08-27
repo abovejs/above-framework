@@ -1,0 +1,123 @@
+{
+  "name": "above-framework",
+  "version": "1.0.0",
+  "description": "AboveJS Core",
+  "main": "build/index.js",
+  "typings": "build/index.d.ts",
+  "repository": "https://github.com/abovejs/framework",
+  "license": "MIT",
+  "keywords": [],
+  "scripts": {
+    "describe": "npm-scripts-info",
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint '**/*.ts' --fix && tsc --noEmit",
+    "test": "jest --verbose --coverage",
+    "doc": "typedoc src/ --exclude **/*.spec.ts --target ES6 --mode file --out build/docs"
+  },
+  "scripts-info": {
+    "info": "Display information about the package scripts",
+    "build": "Clean and rebuild the project",
+    "fix": "Try to automatically fix any linting problems",
+    "test": "Lint and unit test the project",
+    "watch": "Watch and rebuild the project on save, then rerun relevant tests",
+    "cov": "Rebuild, run tests, then create and open the coverage report",
+    "doc": "Generate HTML API documentation and open it in a browser",
+    "doc:json": "Generate API documentation in typedoc JSON format",
+    "version": "Bump package.json version, update CHANGELOG.md, tag release",
+    "reset": "Delete all untracked files and reset the repo to the last commit",
+    "prepare-release": "One-step: clean, build, test, publish docs, and prep a release"
+  },
+  "engines": {
+    "node": ">=8.9"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^18.3.2",
+    "@hapi/inert": "^5.2.1",
+    "@hapi/joi": "^15.1.1",
+    "@hapi/vision": "^5.5.3",
+    "@types/hapi__hapi": "^18.2.5",
+    "abstract-logging": "^1.0.0",
+    "boxen": "^4.1.0",
+    "bunyan": "^1.8.12",
+    "bunyan-logstash-tcp": "^1.0.0",
+    "chalk": "^2.4.2",
+    "hapi-auth-jwt2": "^8.6.1",
+    "hapi-swagger": "^10.1.0",
+    "joi-extract-type": "^15.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "klaw-sync": "^6.0.0",
+    "ramda": "^0.26.1"
+  },
+  "devDependencies": {
+    "@bitjson/npm-scripts-info": "^1.0.0",
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/git": "^7.0.16",
+    "@semantic-release/github": "^5.4.3",
+    "@types/boxen": "^3.0.1",
+    "@types/bunyan": "^1.8.6",
+    "@types/chalk": "^2.2.0",
+    "@types/hapi-auth-jwt2": "^8.6.1",
+    "@types/hapi__inert": "^5.2.0",
+    "@types/hapi__joi": "^15.0.3",
+    "@types/hapi__vision": "^5.5.1",
+    "@types/jest": "^24.0.18",
+    "@types/jsonwebtoken": "^8.3.3",
+    "@types/klaw-sync": "^6.0.0",
+    "@types/ramda": "^0.26.21",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint": "^6.2.2",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.15.2",
+    "eslint-plugin-prettier": "^3.1.0",
+    "gh-pages": "^2.0.1",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "release": {
+    "prepare": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      {
+        "path": "@semantic-release/git",
+        "assets": [
+          "CHANGELOG.md",
+          "package.json",
+          "yarn.lock",
+          "app.json"
+        ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ],
+    "publish": [
+      "@semantic-release/github"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run test:all"
+    }
+  }
+}
