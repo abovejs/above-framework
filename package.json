@@ -11,7 +11,7 @@
     "describe": "npm-scripts-info",
     "build": "tsc -p tsconfig.json",
     "lint": "eslint '**/*.ts' --fix && tsc --noEmit",
-    "test": "jest --verbose --coverage",
+    "test": "jest --verbose --coverage --passWithNoTests",
     "doc": "typedoc src/ --exclude **/*.spec.ts --target ES6 --mode file --out build/docs",
     "commit": "git-cz"
   },
@@ -120,7 +120,7 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "npm run lint",
-      "pre-push": "npm run test:all"
+      "pre-push": "npm run test"
     }
   }
 }
