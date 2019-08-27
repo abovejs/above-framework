@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/abovejs/framework/compare/v2.0.0...v2.1.0) (2019-08-27)
+
+
+### Features
+
+* salvar cache antes de realizar deploy ([7b196a7](https://github.com/abovejs/framework/commit/7b196a7))
+
 # [2.0.0](https://github.com/abovejs/framework/compare/v1.7.7...v2.0.0) (2019-08-27)
 
 
