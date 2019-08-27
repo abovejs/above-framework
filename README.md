@@ -1,3 +1,1 @@
-# above-framework
-
-AboveJS Core
+# AboveJS - Framework
