@@ -8,6 +8,7 @@ import Swagger from '../plugins/swagger';
 import Jwt from '../plugins/jwt';
 import Routes from './routes';
 import RoutesManager from './routes-manager';
+import ExceptionManager from './exception-manager';
 
 class Ignition {
   private server: Hapi.Server;
@@ -45,6 +46,7 @@ class Ignition {
   }
 
   private async loadPlugins() {
+    ExceptionManager.set(this.server);
     if (this.options.plugins && this.options.plugins.length > 0) {
       this.server.register(this.options.plugins);
     }

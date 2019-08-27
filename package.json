@@ -48,6 +48,8 @@
     "joi-extract-type": "^15.0.0",
     "jsonwebtoken": "^8.5.1",
     "klaw-sync": "^6.0.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
     "ramda": "^0.26.1"
   },
   "devDependencies": {
@@ -67,6 +69,8 @@
     "@types/jest": "^24.0.18",
     "@types/jsonwebtoken": "^8.3.3",
     "@types/klaw-sync": "^6.0.0",
+    "@types/lodash": "^4.14.137",
+    "@types/moment": "^2.13.0",
     "@types/ramda": "^0.26.21",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
@@ -87,7 +91,11 @@
     "typescript": "^3.5.3"
   },
   "prettier": {
-    "singleQuote": true
+    "semi": true,
+    "trailingComma": "all",
+    "singleQuote": true,
+    "printWidth": 120,
+    "tabWidth": 2
   },
   "config": {
     "commitizen": {
