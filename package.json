@@ -1,7 +1,12 @@
 {
   "name": "above-framework",
+<<<<<<< HEAD
   "version": "1.0.0",
   "description": "AboveJS Core",
+=======
+  "version": "1.7.7",
+  "description": "Framework with hapijs",
+>>>>>>> c47a0a40fc62984a78c6e28b9ea5fb0c3813e5f0
   "main": "build/index.js",
   "typings": "build/index.d.ts",
   "repository": "https://github.com/abovejs/framework",
