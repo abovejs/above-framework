@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  'node-latest':
+  'test':
     docker:
       - image: circleci/node:latest
     working_directory: ~/above-framework
@@ -16,11 +16,10 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm test
-      - run: npm run cov:send
-      - run: npm run cov:check
+      - run: npm lint
 
 workflows:
   version: 2
   build:
     jobs:
-      - 'node-latest'
+      - 'test'
