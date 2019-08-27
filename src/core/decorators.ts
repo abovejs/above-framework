@@ -1,3 +1,5 @@
+/* eslint-disable func-names */
+
 import { Server } from '@hapi/hapi';
 
 import ControllerManager from './controller-manager';
