@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/abovejs/framework/compare/v2.1.0...v2.2.0) (2019-08-27)
+
+
+### Features
+
+* permitir que seja possível fazer throws response ([5d418cb](https://github.com/abovejs/framework/commit/5d418cb))
+
 # [2.1.0](https://github.com/abovejs/framework/compare/v2.0.0...v2.1.0) (2019-08-27)
 
 
