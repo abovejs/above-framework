@@ -122,6 +122,7 @@
       }
     ],
     "publish": [
+      "@semantic-release/npm",
       "@semantic-release/github"
     ],
     "plugins": [
