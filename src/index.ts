@@ -8,17 +8,6 @@ import { Controller, Delete, Get, Post, Head, Options, Patch, Put } from './core
 import { ApplicationContract, SchemaContract } from './contracts/application.contract';
 import { DatabaseContract } from './contracts/database.contract';
 import BaseException from './bases/base-exception';
-import RootPath from './utils/root-path';
-
-if (process.env.NODE_ENV === 'test') {
-  require('dotenv').config({
-    path: RootPath.get(`../.env.testing`),
-  });
-} else {
-  require('dotenv').config({
-    path: RootPath.get(`../.env`),
-  });
-}
 
 export {
   EnvManager,

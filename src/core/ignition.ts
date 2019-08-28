@@ -37,6 +37,16 @@ class Ignition {
       },
     });
     RootPath.definePath(options.path);
+
+    if (process.env.NODE_ENV === 'test') {
+      require('dotenv').config({
+        path: RootPath.get(`../.env.testing`),
+      });
+    } else {
+      require('dotenv').config({
+        path: RootPath.get(`../.env`),
+      });
+    }
     if (options.schemes && options.schemes.length > 0) {
       RoutesManager.defineSchemes(options.schemes);
     }
