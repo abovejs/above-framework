@@ -6,7 +6,7 @@ import { Server } from '@hapi/hapi';
 
 import RootPath from '../utils/root-path';
 
-const { JWT } = process.env as any;
+const token: any = process.env.JWT || process.env.APP_JWT;
 
 const Swagger = {
   name: 'docs',
@@ -18,10 +18,10 @@ const Swagger = {
         version: require(RootPath.get('../package.json')).version,
         description: `${require(RootPath.get('../package.json')).description}${
           process.env.NODE_ENV !== 'development'
-            ? `<br /><strong>JWT:</strong> <i>${jwt.sign({}, JWT)}</i><script type="text/javascript">
+            ? `<br /><strong>JWT:</strong> <i>${jwt.sign({}, token)}</i><script type="text/javascript">
             setTimeout(function(){
               console.log('oi');
-              document.querySelector("input[name='apiKey']").value = '${jwt.sign({}, JWT)}';
+              document.querySelector("input[name='apiKey']").value = '${jwt.sign({}, token)}';
               if($('#input_apiKey')){
                 var key = $('#input_apiKey')[0].value;
                 if (key && key.trim() != "") {

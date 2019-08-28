@@ -65,9 +65,11 @@ class Ignition {
   private async init() {
     await this.loadPlugins();
     await this.loadRoutes();
-    await this.server.start();
-    // eslint-disable-next-line no-console
-    console.log('Server running on %s', this.server.info.uri);
+    if (process.env.NODE_ENV !== 'test') {
+      await this.server.start();
+      // eslint-disable-next-line no-console
+      console.log('Server running on %s', this.server.info.uri);
+    }
   }
 
   private async loadRoutes() {
