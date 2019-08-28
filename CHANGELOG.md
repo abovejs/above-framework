@@ -1,3 +1,10 @@
+## [2.8.3](https://github.com/abovejs/framework/compare/v2.8.2...v2.8.3) (2019-08-28)
+
+
+### Bug Fixes
+
+* corrigir env ([bf7825a](https://github.com/abovejs/framework/commit/bf7825a))
+
 ## [2.8.2](https://github.com/abovejs/framework/compare/v2.8.1...v2.8.2) (2019-08-28)
 
 
