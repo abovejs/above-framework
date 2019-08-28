@@ -1,3 +1,10 @@
+# [2.5.0](https://github.com/abovejs/framework/compare/v2.4.0...v2.5.0) (2019-08-28)
+
+
+### Features
+
+* publicar no npm automaticamente ([f3063a4](https://github.com/abovejs/framework/commit/f3063a4))
+
 # [2.4.0](https://github.com/abovejs/framework/compare/v2.3.0...v2.4.0) (2019-08-28)
 
 

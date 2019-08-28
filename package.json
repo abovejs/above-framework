@@ -1,6 +1,6 @@
 {
   "name": "above-framework",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "description": "Node.js Framework with hapijs",
   "main": "build/index.js",
   "typings": "build/index.d.ts",
