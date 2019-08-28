@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/abovejs/framework/compare/v2.3.0...v2.4.0) (2019-08-28)
+
+
+### Features
+
+* autoload do jwt no swagger ([e257cdf](https://github.com/abovejs/framework/commit/e257cdf))
+
 # [2.3.0](https://github.com/abovejs/framework/compare/v2.2.0...v2.3.0) (2019-08-28)
 
 
