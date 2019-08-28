@@ -1,7 +1,6 @@
 import Hapi from '@hapi/hapi';
 
 import { ApplicationContract } from '../contracts/application.contract';
-import EnvManager from '../utils/env-manager';
 import RootPath from '../utils/root-path';
 import Log from '../plugins/log';
 import Swagger from '../plugins/swagger';
@@ -16,8 +15,26 @@ class Ignition {
 
   constructor(readonly options: ApplicationContract) {
     this.server = new Hapi.Server({
-      port: EnvManager.get<number>('PORT', { required: true, defaultValue: 3333 }),
-      host: EnvManager.get<string>('HOST', { required: true, defaultValue: 'localhost' }),
+      port: process.env.PORT,
+      host: process.env.HOST,
+      debug: {
+        log: ['error', 'database', 'read'],
+      },
+      state: {
+        strictHeader: false,
+      },
+      routes: {
+        timeout: {
+          server: (parseInt(process.env.TIMEOUT || '240', 10) || 240) * 1000,
+          socket: (parseInt(process.env.TIMEOUT || '240', 10) || 240) * 1000 + 1000,
+        },
+        cors: true,
+        validate: {
+          failAction: (_request, _h, err) => {
+            throw err;
+          },
+        },
+      },
     });
     RootPath.definePath(options.path);
     if (options.schemes && options.schemes.length > 0) {

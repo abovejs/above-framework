@@ -5,9 +5,9 @@ import jwt from 'jsonwebtoken';
 import { Server } from '@hapi/hapi';
 
 import RootPath from '../utils/root-path';
-import EnvManager from '../utils/env-manager';
 
-const JWT = EnvManager.get<string>('JWT', { required: true, defaultValue: 'xpto' });
+const { JWT } = process.env as any;
+
 const Swagger = {
   name: 'docs',
   version: '1.0',

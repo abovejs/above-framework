@@ -31,6 +31,4 @@ class EnvManager {
   }
 }
 
-EnvManager.get<boolean>('teste');
-
 export default EnvManager;
