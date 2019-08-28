@@ -1,4 +1,5 @@
 import Joi from '@hapi/joi';
+import Hapi from '@hapi/hapi';
 
 import EnvManager from './utils/env-manager';
 import Ignition from './core/ignition';
@@ -26,4 +27,5 @@ export {
   DatabaseContract,
   BaseException,
   Joi,
+  Hapi,
 };
