@@ -89,8 +89,8 @@ class Ignition {
           port: process.env.LOG_PORT,
           bztoken: process.env.LOG_TOKEN,
           env: process.env.NODE_ENV,
-          versionApi: require(RootPath.get('./package.json')).version,
-          appName: require(RootPath.get('./package.json')).name,
+          versionApi: require(RootPath.get('../package.json')).version,
+          appName: require(RootPath.get('../package.json')).name,
         } as any,
       });
     }
