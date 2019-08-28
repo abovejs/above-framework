@@ -1,3 +1,5 @@
+import Joi from '@hapi/joi';
+
 import EnvManager from './utils/env-manager';
 import Ignition from './core/ignition';
 import { HttpContract, HttpContract as IHttp } from './contracts/http.contract';
@@ -23,4 +25,5 @@ export {
   SchemaContract,
   DatabaseContract,
   BaseException,
+  Joi,
 };
