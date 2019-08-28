@@ -1,3 +1,10 @@
+## [2.7.1](https://github.com/abovejs/framework/compare/v2.7.0...v2.7.1) (2019-08-28)
+
+
+### Bug Fixes
+
+* retornar server no Ignition.start ([3f350eb](https://github.com/abovejs/framework/commit/3f350eb))
+
 # [2.7.0](https://github.com/abovejs/framework/compare/v2.6.0...v2.7.0) (2019-08-28)
 
 
