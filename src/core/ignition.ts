@@ -37,16 +37,6 @@ class Ignition {
       },
     });
     RootPath.definePath(options.path);
-
-    if (process.env.NODE_ENV === 'test') {
-      require('dotenv').config({
-        path: RootPath.get(`../.env.testing`),
-      });
-    } else {
-      require('dotenv').config({
-        path: RootPath.get(`../.env`),
-      });
-    }
     if (options.schemes && options.schemes.length > 0) {
       RoutesManager.defineSchemes(options.schemes);
     }
@@ -65,6 +55,11 @@ class Ignition {
   private async init() {
     await this.loadPlugins();
     await this.loadRoutes();
+
+    if (this.options.database && this.options.database.authenticate) {
+      await this.options.database.authenticate();
+    }
+
     if (process.env.NODE_ENV !== 'test') {
       await this.server.start();
       // eslint-disable-next-line no-console
