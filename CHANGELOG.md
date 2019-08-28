@@ -1,3 +1,10 @@
+# [2.8.0](https://github.com/abovejs/framework/compare/v2.7.1...v2.8.0) (2019-08-28)
+
+
+### Features
+
+* ajustar env manager ([7ba576d](https://github.com/abovejs/framework/commit/7ba576d))
+
 ## [2.7.1](https://github.com/abovejs/framework/compare/v2.7.0...v2.7.1) (2019-08-28)
 
 
