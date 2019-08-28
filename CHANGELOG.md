@@ -1,3 +1,10 @@
+## [2.8.5](https://github.com/abovejs/framework/compare/v2.8.4...v2.8.5) (2019-08-28)
+
+
+### Bug Fixes
+
+* ajustar inicialização do projeto ([b9a98b9](https://github.com/abovejs/framework/commit/b9a98b9))
+
 ## [2.8.4](https://github.com/abovejs/framework/compare/v2.8.3...v2.8.4) (2019-08-28)
 
 
