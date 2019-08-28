@@ -21,6 +21,7 @@ class ControllerManager {
 
   public static register = ({ name, path, server, version }: RegisterContract) => {
     const items = ControllerManager.routes[name];
+    delete ControllerManager.routes[name];
     const routes: Array<ServerRoute> = [];
     if (items) {
       items.forEach((item: any) => {

@@ -145,7 +145,7 @@ class RoutesManager {
         this.routeOptions.validate = {
           ...this.routeOptions.validate,
           // @ts-ignore
-          [key]: this.routeOptions.validate[key].append(source),
+          [key]: validate.append(source),
         };
       }
     }

@@ -4,6 +4,7 @@ import R from 'ramda';
 
 import path from 'path';
 import RootPath from '../utils/root-path';
+import { consoleError } from '../helpers';
 
 class Routes {
   public static load(server: Server) {
@@ -16,7 +17,9 @@ class Routes {
           .split('/')[1];
         const Controller = require(file.path).default;
         return new Controller(server, version);
-      } catch {
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        consoleError(error);
         return false;
       }
     });

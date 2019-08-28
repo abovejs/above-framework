@@ -6,7 +6,7 @@ const ignition = new Ignition({
   schemes: [
     {
       include: /(.*payment.*)/,
-      exclude: /(.*get.*)/,
+      exclude: /(.*get.*|^\/v2.*)/,
       source: {
         headers: Joi.object({
           'application-name': Joi.string().required(),
