@@ -32,6 +32,7 @@ class Ignition {
       process.exit(1);
     });
     await this.init();
+    return this.server;
   }
 
   private async init() {
