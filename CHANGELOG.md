@@ -1,3 +1,10 @@
+## [2.8.1](https://github.com/abovejs/framework/compare/v2.8.0...v2.8.1) (2019-08-28)
+
+
+### Bug Fixes
+
+* ajustar dotenv ([54a5d2f](https://github.com/abovejs/framework/commit/54a5d2f))
+
 # [2.8.0](https://github.com/abovejs/framework/compare/v2.7.1...v2.8.0) (2019-08-28)
 
 
