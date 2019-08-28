@@ -1,3 +1,10 @@
+# [2.6.0](https://github.com/abovejs/framework/compare/v2.5.0...v2.6.0) (2019-08-28)
+
+
+### Features
+
+* retornar o objeto do Joi ([2972615](https://github.com/abovejs/framework/commit/2972615))
+
 # [2.5.0](https://github.com/abovejs/framework/compare/v2.4.0...v2.5.0) (2019-08-28)
 
 
