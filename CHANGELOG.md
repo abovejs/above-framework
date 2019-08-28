@@ -1,3 +1,10 @@
+# [2.7.0](https://github.com/abovejs/framework/compare/v2.6.0...v2.7.0) (2019-08-28)
+
+
+### Features
+
+* exportar o hapi ([ca6015d](https://github.com/abovejs/framework/commit/ca6015d))
+
 # [2.6.0](https://github.com/abovejs/framework/compare/v2.5.0...v2.6.0) (2019-08-28)
 
 
