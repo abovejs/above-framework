@@ -11,7 +11,7 @@ class PaymentController {
     records: true,
     validate: PaymentSchema.findAll.validate,
   })
-  async findAll({
+  async xxx({
     reply,
     request: {
       payload: { name },
