@@ -17,7 +17,7 @@ const Swagger = {
         title: require(RootPath.get('../package.json')).name,
         version: require(RootPath.get('../package.json')).version,
         description: `${require(RootPath.get('../package.json')).description}${
-          process.env.NODE_ENV !== 'development'
+          process.env.NODE_ENV === 'development'
             ? `<br /><strong>JWT:</strong> <i>${jwt.sign({}, token)}</i><script type="text/javascript">
             setTimeout(function(){
               console.log('oi');

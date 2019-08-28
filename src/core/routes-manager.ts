@@ -103,13 +103,10 @@ class RoutesManager {
 
   private setSchemaForPaginate() {
     if (this.routeOptions.paginate) {
-      this.setSchemeInByKey(
-        'query',
-        Joi.object({
-          limit: Joi.number().default(50),
-          offset: Joi.number().default(0),
-        }),
-      );
+      this.setSchemeInByKey('query', {
+        limit: Joi.number().default(50),
+        offset: Joi.number().default(0),
+      });
     }
   }
 
