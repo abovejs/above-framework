@@ -1,3 +1,10 @@
+## [2.8.4](https://github.com/abovejs/framework/compare/v2.8.3...v2.8.4) (2019-08-28)
+
+
+### Bug Fixes
+
+* corrigir paginate ([ce0c82e](https://github.com/abovejs/framework/commit/ce0c82e))
+
 ## [2.8.3](https://github.com/abovejs/framework/compare/v2.8.2...v2.8.3) (2019-08-28)
 
 
