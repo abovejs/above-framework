@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/abovejs/framework/compare/v2.2.0...v2.3.0) (2019-08-28)
+
+
+### Features
+
+* implementar console errors ([89d4381](https://github.com/abovejs/framework/commit/89d4381))
+
 # [2.2.0](https://github.com/abovejs/framework/compare/v2.1.0...v2.2.0) (2019-08-27)
 
 
