@@ -4,7 +4,7 @@ import HealthController from './health.controller';
 import { DatabaseContract } from '../..';
 
 const Health = {
-  name: 'auth-jwt',
+  name: 'health-check',
   version: '1.0',
   register: async (
     server: Server,
