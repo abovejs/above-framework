@@ -16,11 +16,9 @@ class Routes {
           .replace(rootApp, '')
           .split('/')[1];
         const Controller = require(file.path).default;
-        return new Controller(server, version);
+        new Controller(server, version);
       } catch (error) {
-        // eslint-disable-next-line no-console
         consoleError(error);
-        return false;
       }
     });
   }

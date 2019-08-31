@@ -69,13 +69,7 @@ class Ignition {
   }
 
   private async loadRoutes() {
-    const { controller } = this.options;
-    if (controller && controller.class) {
-      // eslint-disable-next-line new-cap
-      new controller.class(this.server, controller.version);
-    } else {
-      await Routes.load(this.server);
-    }
+    await Routes.load(this.server);
   }
 
   private async loadPlugins() {
