@@ -1,3 +1,10 @@
+# [2.9.0](https://github.com/abovejs/framework/compare/v2.8.5...v2.9.0) (2019-08-31)
+
+
+### Features
+
+* incluir health check com ping-pong ([082287d](https://github.com/abovejs/framework/commit/082287d))
+
 ## [2.8.5](https://github.com/abovejs/framework/compare/v2.8.4...v2.8.5) (2019-08-28)
 
 
