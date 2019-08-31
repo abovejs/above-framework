@@ -1,7 +1,4 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.implementationsCodeLens.enabled": false,
-  "typescript.referencesCodeLens.enabled": false,
   "eslint.autoFixOnSave": true,
   "eslint.packageManager": "yarn",
   "files.autoSave": "off",

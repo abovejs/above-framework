@@ -14,6 +14,7 @@ export interface RegisterContract {
   version: string;
   name: string;
 }
+
 type MethodType = (http: HttpContract) => Promise<ResponseObject>;
 
 class ControllerManager {

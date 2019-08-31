@@ -27,6 +27,7 @@
     }
   },
   "rules": {
+    "no-new": "off",
     "import/no-dynamic-require": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/ban-ts-ignore": "off",

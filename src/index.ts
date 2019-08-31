@@ -20,6 +20,7 @@ import { Controller, Delete, Get, Post, Head, Options, Patch, Put } from './core
 import { ApplicationContract, SchemaContract } from './contracts/application.contract';
 import { DatabaseContract } from './contracts/database.contract';
 import BaseException from './bases/base-exception';
+import { ControllerContract } from './contracts/controller.contract';
 
 export {
   EnvManager,
@@ -40,4 +41,5 @@ export {
   BaseException,
   Joi,
   Hapi,
+  ControllerContract,
 };

@@ -9,6 +9,7 @@ import Routes from './routes';
 import RoutesManager from './routes-manager';
 import ExceptionManager from './exception-manager';
 import ConsoleErrors from './console-errors';
+import Health from '../plugins/health';
 
 class Ignition {
   private server: Hapi.Server;
@@ -68,7 +69,13 @@ class Ignition {
   }
 
   private async loadRoutes() {
-    await Routes.load(this.server);
+    const { controller } = this.options;
+    if (controller && controller.class) {
+      // eslint-disable-next-line new-cap
+      new controller.class(this.server, controller.version);
+    } else {
+      await Routes.load(this.server);
+    }
   }
 
   private async loadPlugins() {
@@ -97,6 +104,12 @@ class Ignition {
     }
 
     await this.server.register({ plugin: Jwt });
+    await this.server.register({
+      plugin: Health,
+      options: {
+        database: this.options.database,
+      } as any,
+    });
   }
 }
 

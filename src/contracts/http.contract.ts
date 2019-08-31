@@ -9,7 +9,7 @@ type Diff<T extends string | symbol | number, U extends string | symbol | number
 
 type Omit<T, K extends keyof T> = { [P in Diff<keyof T, K>]: T[P] };
 
-export type RequestContract<T> = Omit<Request, 'payload' | 'params' | 'query' | 'headers'> &
+export type RequestContract<T> = Omit<Request, 'payload' | 'params' | 'query'> &
   T & {
     paginate: {
       limit: number;
