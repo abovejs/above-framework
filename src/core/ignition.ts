@@ -1,4 +1,5 @@
 import Hapi from '@hapi/hapi';
+import equal from 'fast-deep-equal';
 
 import { ApplicationContract } from '../contracts/application.contract';
 import RootPath from '../utils/root-path';
@@ -10,43 +11,57 @@ import RoutesManager from './routes-manager';
 import ExceptionManager from './exception-manager';
 import ConsoleErrors from './console-errors';
 import Health from '../plugins/health';
+import { consoleError } from '../helpers';
 
 class Ignition {
+  private static instance: {
+    key: ApplicationContract;
+    server: Hapi.Server;
+  }[] = [];
+
   private server: Hapi.Server;
 
   constructor(readonly options: ApplicationContract) {
-    this.server = new Hapi.Server({
-      port: process.env.PORT,
-      host: process.env.HOST,
-      debug: {
-        log: ['error', 'database', 'read'],
-      },
-      state: {
-        strictHeader: false,
-      },
-      routes: {
-        timeout: {
-          server: (parseInt(process.env.TIMEOUT || '240', 10) || 240) * 1000,
-          socket: (parseInt(process.env.TIMEOUT || '240', 10) || 240) * 1000 + 1000,
+    const serverInstace = Ignition.instance.find(instance => equal(instance.key, options));
+    if (serverInstace) {
+      this.server = serverInstace.server;
+    } else {
+      this.server = new Hapi.Server({
+        port: process.env.PORT,
+        host: process.env.HOST,
+        debug: {
+          log: ['error', 'database', 'read'],
         },
-        cors: true,
-        validate: {
-          failAction: (_request, _h, err) => {
-            throw err;
+        state: {
+          strictHeader: false,
+        },
+        routes: {
+          timeout: {
+            server: (parseInt(process.env.TIMEOUT || '240', 10) || 240) * 1000,
+            socket: (parseInt(process.env.TIMEOUT || '240', 10) || 240) * 1000 + 1000,
+          },
+          cors: true,
+          validate: {
+            failAction: (_request, _h, err) => {
+              throw err;
+            },
           },
         },
-      },
-    });
-    RootPath.definePath(options.path);
-    if (options.schemes && options.schemes.length > 0) {
-      RoutesManager.defineSchemes(options.schemes);
+      });
+      RootPath.definePath(options.path);
+      if (options.schemes && options.schemes.length > 0) {
+        RoutesManager.defineSchemes(options.schemes);
+      }
+      Ignition.instance.push({
+        key: options,
+        server: this.server,
+      });
     }
   }
 
   public async start() {
     process.on('unhandledRejection', err => {
-      // eslint-disable-next-line no-console
-      console.log(err);
+      consoleError(err);
       process.exit(1);
     });
     await this.init();
