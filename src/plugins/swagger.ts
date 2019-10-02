@@ -20,7 +20,6 @@ const Swagger = {
           process.env.NODE_ENV === 'development'
             ? `<br /><strong>JWT:</strong> <i>${jwt.sign({}, token)}</i><script type="text/javascript">
             setTimeout(function(){
-              console.log('oi');
               document.querySelector("input[name='apiKey']").value = '${jwt.sign({}, token)}';
               if($('#input_apiKey')){
                 var key = $('#input_apiKey')[0].value;

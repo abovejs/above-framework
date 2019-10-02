@@ -17,6 +17,12 @@ abstract class BaseException extends Error {
       errorName: this.constructor.name,
     };
   }
+
+  public getSchema() {
+    return {
+      [this.payload.statusCode]: this.getResponse(),
+    };
+  }
 }
 
 export default BaseException;
