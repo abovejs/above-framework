@@ -1,3 +1,15 @@
+# [2.10.0](https://github.com/abovejs/framework/compare/v2.9.1...v2.10.0) (2019-09-01)
+
+
+### Bug Fixes
+
+* ajustar o carregamento de uma controller ([bdc45d4](https://github.com/abovejs/framework/commit/bdc45d4))
+
+
+### Features
+
+* estratégia para criar apenas um servidor ([d00b9c7](https://github.com/abovejs/framework/commit/d00b9c7))
+
 ## [2.9.1](https://github.com/abovejs/framework/compare/v2.9.0...v2.9.1) (2019-08-31)
 
 
