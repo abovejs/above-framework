@@ -1,3 +1,10 @@
+## [2.11.1](https://github.com/abovejs/framework/compare/v2.11.0...v2.11.1) (2019-10-02)
+
+
+### Bug Fixes
+
+* incluir errorName ([5ab7227](https://github.com/abovejs/framework/commit/5ab7227))
+
 # [2.11.0](https://github.com/abovejs/framework/compare/v2.10.0...v2.11.0) (2019-10-02)
 
 
