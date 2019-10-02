@@ -19,8 +19,9 @@ abstract class BaseException extends Error {
   }
 
   public getSchema() {
+    const error = this.getResponse();
     return {
-      [this.payload.statusCode]: this.getResponse(),
+      [`${error.statusCode} - ${error.errorName}`]: error,
     };
   }
 }
