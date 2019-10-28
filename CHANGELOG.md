@@ -1,3 +1,10 @@
+# [2.11.0](https://github.com/abovejs/framework/compare/v2.10.0...v2.11.0) (2019-10-02)
+
+
+### Features
+
+* incluir o getSchema no BaseException ([15c1582](https://github.com/abovejs/framework/commit/15c1582))
+
 # [2.10.0](https://github.com/abovejs/framework/compare/v2.9.1...v2.10.0) (2019-09-01)
 
 
