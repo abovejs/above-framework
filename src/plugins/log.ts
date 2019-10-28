@@ -41,10 +41,6 @@ const Log = {
 
     const streams: Bunyan.Stream[] = [
       {
-        level: 'info',
-        stream: process.stdout,
-      },
-      {
         level: 'debug',
         type: 'raw',
         stream: BunyanTCP.createStream({
