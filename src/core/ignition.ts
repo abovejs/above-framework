@@ -94,7 +94,12 @@ class Ignition {
       this.server.register(this.options.plugins);
     }
 
-    if (process.env.NODE_ENV === 'stage' || process.env.NODE_ENV === 'production') {
+    if (
+      (process.env.NODE_ENV === 'stage' || process.env.NODE_ENV === 'production') &&
+      process.env.LOG_HOST &&
+      process.env.LOG_PORT &&
+      process.env.LOG_TOKEN
+    ) {
       await this.server.register({
         plugin: Log,
         options: {
