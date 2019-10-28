@@ -21,12 +21,22 @@ const Health = {
           auth: false,
           description: 'Heath check',
           tags: ['api'],
-          handler: controller.health,
+          handler: controller.ping,
         },
       },
       {
         method: 'GET',
         path: '/health/ping',
+        options: {
+          auth: false,
+          description: 'Ping/Pong',
+          tags: ['api'],
+          handler: controller.ping,
+        },
+      },
+      {
+        method: 'GET',
+        path: '/health/check',
         options: {
           auth: false,
           description: 'Ping/Pong',
