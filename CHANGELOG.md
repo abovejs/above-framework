@@ -1,3 +1,10 @@
+# [2.12.0](https://github.com/abovejs/framework/compare/v2.11.1...v2.12.0) (2019-10-28)
+
+
+### Features
+
+* só incluir lib de logs se tiver variaveis ([93cfda7](https://github.com/abovejs/framework/commit/93cfda7))
+
 ## [2.11.1](https://github.com/abovejs/framework/compare/v2.11.0...v2.11.1) (2019-10-02)
 
 
