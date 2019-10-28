@@ -1,3 +1,10 @@
+## [2.12.1](https://github.com/abovejs/framework/compare/v2.12.0...v2.12.1) (2019-10-28)
+
+
+### Bug Fixes
+
+* ajustar health check ([97a6ba1](https://github.com/abovejs/framework/commit/97a6ba1))
+
 # [2.12.0](https://github.com/abovejs/framework/compare/v2.11.1...v2.12.0) (2019-10-28)
 
 
