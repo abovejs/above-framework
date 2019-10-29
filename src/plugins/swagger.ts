@@ -43,6 +43,7 @@ const Swagger = {
           in: 'header',
         },
       },
+      security: [{ jwt: [] }],
       pathPrefixSize: 1,
       pathReplacements: [
         {
