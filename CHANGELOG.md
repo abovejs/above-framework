@@ -1,3 +1,10 @@
+## [2.12.3](https://github.com/abovejs/framework/compare/v2.12.2...v2.12.3) (2019-10-30)
+
+
+### Bug Fixes
+
+* corrigir swagger ([f3d18ae](https://github.com/abovejs/framework/commit/f3d18ae5116242443cbc6abad5d48e4d4c05db9f))
+
 ## [2.12.2](https://github.com/abovejs/framework/compare/v2.12.1...v2.12.2) (2019-10-29)
 
 
