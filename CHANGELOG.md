@@ -1,3 +1,10 @@
+## [2.13.2](https://github.com/abovejs/framework/compare/v2.13.1...v2.13.2) (2020-04-02)
+
+
+### Bug Fixes
+
+* update contracts ([ac967b5](https://github.com/abovejs/framework/commit/ac967b5))
+
 ## [2.13.1](https://github.com/abovejs/framework/compare/v2.13.0...v2.13.1) (2020-04-02)
 
 
