@@ -21,7 +21,6 @@
     "build": "Clean and rebuild the project",
     "fix": "Try to automatically fix any linting problems",
     "test": "Lint and unit test the project",
-    "watch": "Watch and rebuild the project on save, then rerun relevant tests",
     "cov": "Rebuild, run tests, then create and open the coverage report",
     "doc": "Generate HTML API documentation and open it in a browser",
     "doc:json": "Generate API documentation in typedoc JSON format",
