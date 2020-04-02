@@ -1,3 +1,10 @@
+## [2.13.4](https://github.com/abovejs/framework/compare/v2.13.3...v2.13.4) (2020-04-02)
+
+
+### Bug Fixes
+
+* remover routes ([9c5d2f2](https://github.com/abovejs/framework/commit/9c5d2f2))
+
 ## [2.13.3](https://github.com/abovejs/framework/compare/v2.13.2...v2.13.3) (2020-04-02)
 
 
