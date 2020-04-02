@@ -2,6 +2,7 @@ import {
   RouteOptions,
   Util,
   ResponseToolkit,
+  ResponseObject,
   Request,
   RouteOptionsValidate,
   RouteOptionsResponseSchema,
@@ -14,6 +15,7 @@ import { SchemaContract } from '../contracts/application.contract';
 export interface RouteOptionsContract extends RouteOptions {
   records?: boolean;
   paginate?: boolean;
+  middleware?: Array<(req: Request, h: ResponseToolkit) => Promise<ResponseObject>>;
 }
 
 export interface RoutesManagerContract {
@@ -55,6 +57,16 @@ class RoutesManager {
             };
           }
           if (descriptor.value) {
+            if (this.routeOptions.middleware && this.routeOptions.middleware.length > 0) {
+              // eslint-disable-next-line no-restricted-syntax
+              for (const middleware of this.routeOptions.middleware) {
+                // eslint-disable-next-line no-await-in-loop
+                const responseMiddleware = await middleware(req, reply);
+                if (responseMiddleware.source !== reply.continue) {
+                  return responseMiddleware;
+                }
+              }
+            }
             const response = await descriptor.value({
               request: {
                 ...req,
@@ -82,6 +94,7 @@ class RoutesManager {
           }
           return reply.continue;
         },
+
         options: {
           auth: 'jwt',
           tags: ['api'],

@@ -94,18 +94,14 @@ class Ignition {
       this.server.register(this.options.plugins);
     }
 
-    if (
-      (process.env.NODE_ENV === 'stage' || process.env.NODE_ENV === 'production') &&
-      process.env.LOG_HOST &&
-      process.env.LOG_PORT &&
-      process.env.LOG_TOKEN
-    ) {
+    if (process.env.NODE_ENV === 'stage' || process.env.NODE_ENV === 'production') {
       await this.server.register({
         plugin: Log,
         options: {
           host: process.env.LOG_HOST,
           port: process.env.LOG_PORT,
           bztoken: process.env.LOG_TOKEN,
+          enableConsole: process.env.LOG_CONSOLE_ENABLE === 'true',
           env: process.env.NODE_ENV,
           versionApi: require(RootPath.get('../package.json')).version,
           appName: require(RootPath.get('../package.json')).name,
