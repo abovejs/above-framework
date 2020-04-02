@@ -1,3 +1,10 @@
+## [2.13.3](https://github.com/abovejs/framework/compare/v2.13.2...v2.13.3) (2020-04-02)
+
+
+### Bug Fixes
+
+* ajustar promise symble ([a67071c](https://github.com/abovejs/framework/commit/a67071c))
+
 ## [2.13.2](https://github.com/abovejs/framework/compare/v2.13.1...v2.13.2) (2020-04-02)
 
 
