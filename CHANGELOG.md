@@ -1,3 +1,10 @@
+## [2.12.7](https://github.com/abovejs/framework/compare/v2.12.6...v2.12.7) (2020-04-02)
+
+
+### Bug Fixes
+
+* corrigir lock ([3825a12](https://github.com/abovejs/framework/commit/3825a12))
+
 ## [2.12.6](https://github.com/abovejs/framework/compare/v2.12.5...v2.12.6) (2020-04-02)
 
 
