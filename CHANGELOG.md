@@ -1,3 +1,10 @@
+## [2.12.5](https://github.com/abovejs/framework/compare/v2.12.4...v2.12.5) (2020-04-02)
+
+
+### Bug Fixes
+
+* update libs ([9a32fd7](https://github.com/abovejs/framework/commit/9a32fd7011806b2ea398b63e898b32ebde7cf55e))
+
 ## [2.12.4](https://github.com/abovejs/framework/compare/v2.12.3...v2.12.4) (2019-12-05)
 
 
