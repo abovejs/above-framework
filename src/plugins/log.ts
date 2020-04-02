@@ -2,7 +2,7 @@
 import { Request, Server } from '@hapi/hapi';
 import NullLogger from 'abstract-logging';
 import Bunyan from 'bunyan';
-import BunyanTCP from 'bunyan-logstash-tcp';
+import BunyanTCP from 'bunyan-logstash-tcp-fork';
 
 const levelTags = {
   trace: 'trace',
