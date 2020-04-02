@@ -1,3 +1,16 @@
+# [2.13.0](https://github.com/abovejs/framework/compare/v2.12.7...v2.13.0) (2020-04-02)
+
+
+### Bug Fixes
+
+* corrigir package.json ([e6b68b3](https://github.com/abovejs/framework/commit/e6b68b3))
+* update semantic release ([dd1be12](https://github.com/abovejs/framework/commit/dd1be12))
+
+
+### Features
+
+* incluir middleware ([879f4ca](https://github.com/abovejs/framework/commit/879f4ca))
+
 ## [2.12.7](https://github.com/abovejs/framework/compare/v2.12.6...v2.12.7) (2020-04-02)
 
 
