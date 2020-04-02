@@ -1,12 +1,7 @@
-import { Util, RouteOptions, Server, ServerRoute, ResponseObject } from '@hapi/hapi';
+import { Util, Server, ServerRoute, ResponseObject } from '@hapi/hapi';
 
-import RoutesManager from './routes-manager';
+import RoutesManager, { RouteOptionsContract } from './routes-manager';
 import { HttpContract } from '..';
-
-export interface RouteOptionsContract extends RouteOptions {
-  records?: boolean;
-  paginate?: boolean;
-}
 
 export interface RegisterContract {
   server: Server;
