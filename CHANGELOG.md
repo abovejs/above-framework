@@ -1,3 +1,10 @@
+## [2.12.6](https://github.com/abovejs/framework/compare/v2.12.5...v2.12.6) (2020-04-02)
+
+
+### Bug Fixes
+
+* coloca as versões fixas do hapi ([26f43e6](https://github.com/abovejs/framework/commit/26f43e6b3a8570e1e5c4fe58cb11f5d11f44ee13))
+
 ## [2.12.5](https://github.com/abovejs/framework/compare/v2.12.4...v2.12.5) (2020-04-02)
 
 
