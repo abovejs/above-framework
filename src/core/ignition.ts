@@ -22,7 +22,7 @@ class Ignition {
   private server: Hapi.Server;
 
   constructor(readonly options: ApplicationContract) {
-    const serverInstace = Ignition.instance.find((instance) => equal(instance.key, options));
+    const serverInstace = Ignition.instance.find(instance => equal(instance.key, options));
     if (serverInstace) {
       this.server = serverInstace.server;
     } else {
@@ -60,7 +60,7 @@ class Ignition {
   }
 
   public async start() {
-    process.on('unhandledRejection', (err) => {
+    process.on('unhandledRejection', err => {
       consoleError(err);
       process.exit(1);
     });
