@@ -1,3 +1,10 @@
+## [2.13.1](https://github.com/abovejs/framework/compare/v2.13.0...v2.13.1) (2020-04-02)
+
+
+### Bug Fixes
+
+* update lib log ([2e55bad](https://github.com/abovejs/framework/commit/2e55bad))
+
 # [2.13.0](https://github.com/abovejs/framework/compare/v2.12.7...v2.13.0) (2020-04-02)
 
 
