@@ -5,9 +5,9 @@ import { Server } from '@hapi/hapi';
 import ControllerManager from './controller-manager';
 
 export const Controller = (path = '') => {
-  return function(target: any) {
+  return function (target: any) {
     const original = target;
-    const f: any = function(server: Server, version: string) {
+    const f: any = function (server: Server, version: string) {
       ControllerManager.register({
         name: target.name,
         path,

@@ -111,7 +111,7 @@ class RoutesManager {
   }
 
   private setSchemaPersonalizateByPath(path: string) {
-    RoutesManager.schemes.forEach(schema => {
+    RoutesManager.schemes.forEach((schema) => {
       if ((!schema.include || schema.include.test(path)) && (!schema.exclude || !schema.exclude.test(path))) {
         if (schema.source.query) {
           this.setSchemeInByKey('query', schema.source.query);

@@ -27,6 +27,16 @@
     }
   },
   "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
     "no-new": "off",
     "import/no-dynamic-require": "off",
     "@typescript-eslint/no-explicit-any": "off",
