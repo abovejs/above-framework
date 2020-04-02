@@ -66,6 +66,7 @@ class RoutesManager {
                   return responseMiddleware;
                 }
               }
+              delete this.routeOptions.middleware;
             }
             const response = await descriptor.value({
               request: {
