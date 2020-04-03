@@ -66,7 +66,6 @@ class RoutesManager {
                   return responseMiddleware;
                 }
               }
-              delete this.routeOptions.middleware;
             }
             const response = await descriptor.value({
               request: {
@@ -106,6 +105,7 @@ class RoutesManager {
               allowUnknown: true,
             },
           },
+          middleware: undefined,
           records: undefined,
           paginate: undefined,
         },
