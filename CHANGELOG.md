@@ -1,3 +1,11 @@
+# [2.14.0](https://github.com/abovejs/framework/compare/v2.13.5...v2.14.0) (2020-05-18)
+
+
+### Features
+
+* logar as credentials ([3799551](https://github.com/abovejs/framework/commit/3799551))
+* melhorar logs ([cc91535](https://github.com/abovejs/framework/commit/cc91535))
+
 ## [2.13.5](https://github.com/abovejs/framework/compare/v2.13.4...v2.13.5) (2020-04-03)
 
 
