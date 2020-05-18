@@ -214,6 +214,7 @@ const Log = {
             request_body: JSON.stringify(request.payload),
             request_header: JSON.stringify(request.headers),
             request_method: request.method,
+            request_authorization: request.auth.credentials
           },
           peer: {
             service: appName,
