@@ -93,7 +93,7 @@ const Log = {
         throw new Error('invalid tag levels');
       }
 
-      const ignoreTable: any = {};
+      const ignoreTable: any = ['/health', '/health/ping', '/health/check'];
       if (ignorePaths) {
         for (let i = 0; i < ignorePaths.length; i += 1) {
           ignoreTable[ignorePaths[i]] = true;
@@ -214,6 +214,7 @@ const Log = {
             request_body: JSON.stringify(request.payload),
             request_header: JSON.stringify(request.headers),
             request_method: request.method,
+            request_authorization: request.auth.credentials
           },
           peer: {
             service: appName,
