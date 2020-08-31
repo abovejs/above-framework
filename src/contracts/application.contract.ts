@@ -1,4 +1,4 @@
-import { ServerRegisterPluginObject, RouteOptionsValidate } from '@hapi/hapi';
+import { ServerRegisterPluginObject, RouteOptionsValidate, RouteOptionsCors } from '@hapi/hapi';
 
 import { DatabaseContract } from './database.contract';
 import { ControllerContract } from './controller.contract';
@@ -15,4 +15,5 @@ export interface ApplicationContract {
   path: string;
   controller?: ControllerContract;
   schemes?: SchemaContract[];
+  cors?: boolean | RouteOptionsCors;
 }

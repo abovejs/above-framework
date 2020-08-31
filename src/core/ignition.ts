@@ -40,7 +40,7 @@ class Ignition {
             server: (parseInt(process.env.TIMEOUT || '240', 10) || 240) * 1000,
             socket: (parseInt(process.env.TIMEOUT || '240', 10) || 240) * 1000 + 1000,
           },
-          cors: true,
+          cors: options.cors !== undefined ? options.cors : true,
           validate: {
             failAction: (_request, _h, err) => {
               throw err;
