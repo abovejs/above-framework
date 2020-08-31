@@ -1,3 +1,10 @@
+# [2.15.0](https://github.com/abovejs/framework/compare/v2.14.0...v2.15.0) (2020-08-31)
+
+
+### Features
+
+* permitir configurações de cors ([45ca6c7](https://github.com/abovejs/framework/commit/45ca6c7))
+
 # [2.14.0](https://github.com/abovejs/framework/compare/v2.13.5...v2.14.0) (2020-05-18)
 
 
